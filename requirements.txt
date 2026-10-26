@@ -1,0 +1,13 @@
+numpy
+opencv-python-headless
+pyyaml
+matplotlib
+torch
+tqdm
+
+kornia
+
+# Optional (enable as needed)
+# torchvision
+# pillow
+# scipy

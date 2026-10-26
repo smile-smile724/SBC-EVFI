@@ -1,0 +1,347 @@
+[2026-09-17 15:57:04] [INFO] device=cuda  exp=test_v21_lpips  phase=2
+[2026-09-17 15:57:05] [INFO] bf16 AMP enabled
+[2026-09-17 15:57:05] [INFO] found 240 train sequences, 30 val sequences
+[2026-09-17 15:58:36] [INFO] event=640x360, target=1280x720  event_downsample=1
+[2026-09-17 15:58:36] [INFO] model params: 1,437,303  hidden=128
+[2026-09-17 15:58:38] [INFO] LPIPS metric enabled (alex)
+[2026-09-17 15:58:38] [INFO] train pairs: 2640
+[2026-09-17 15:58:38] [INFO] t_anchor params: 12  lr=2e-04 (base=2e-05)
+[2026-09-17 15:58:38] [INFO] resuming from experiments/test_v21/phase1/ckpt/ckpt_phase1_best.pth
+[2026-09-17 15:58:38] [INFO]   stripped _orig_mod. from 80 ckpt keys
+[2026-09-17 15:58:38] [INFO]   copying deblur_head -> ['deblur_head_bwd', 'deblur_head_fwd', 'deblur_head_fusion']
+[2026-09-17 15:58:38] [INFO] phase2 load: 110 matched, 36 missing, 0 unexpected
+[2026-09-17 15:58:38] [INFO]   ckpt epoch=17 phase=1 best_metric=26.768973333548146
+[2026-09-17 15:58:38] [INFO]   missing keys: ['blurry_predictor_bwd.t_conv.bias', 'blurry_predictor_bwd.t_conv.weight', 'blurry_predictor_fwd.t_conv.bias', 'blurry_predictor_fwd.t_conv.weight', 'deblur_head_bwd.color_net.0.bias', 'deblur_head_bwd.color_net.0.weight', 'deblur_head_bwd.color_net.2.bias', 'deblur_head_bwd.color_net.2.weight', 'deblur_head_fusion.color_net.0.bias', 'deblur_head_fusion.color_net.0.weight', 'deblur_head_fusion.color_net.2.bias', 'deblur_head_fusion.color_net.2.weight', 'deblur_head_fwd.color_net.0.bias', 'deblur_head_fwd.color_net.0.weight', 'deblur_head_fwd.color_net.2.bias', 'deblur_head_fwd.color_net.2.weight', 'fusion_head.0.bias', 'fusion_head.0.weight', 'fusion_head.1.bias', 'fusion_head.1.weight', 'fusion_head.3.bias', 'fusion_head.3.weight', 'fusion_head.4.bias', 'fusion_head.4.weight', 'fusion_head.6.bias', 'fusion_head.6.weight', 'fusion_head.7.bias', 'fusion_head.7.weight', 'fusion_head.9.bias', 'fusion_head.9.weight', 'offset_head_bwd.t_bias_proj.bias', 'offset_head_bwd.t_bias_proj.weight', 'offset_head_bwd.t_scale', 'offset_head_fwd.t_bias_proj.bias', 'offset_head_fwd.t_bias_proj.weight', 'offset_head_fwd.t_scale']
+[2026-09-17 15:58:38] [INFO] weight verification (model vs ckpt, sha256[:8]):
+[2026-09-17 15:58:38] [INFO]   encoder: model=359f699b ckpt=359f699b [OK]
+[2026-09-17 15:58:38] [INFO]   offset_fwd: model=e814adc9 ckpt=e814adc9 [OK]
+[2026-09-17 15:58:38] [INFO]   offset_bwd: model=12f7c175 ckpt=12f7c175 [OK]
+[2026-09-17 15:58:38] [INFO]   deblur_bwd: model=a761c71c ckpt=a761c71c [OK]
+[2026-09-17 15:58:38] [INFO]   deblur_fwd: model=a761c71c ckpt=a761c71c [OK]
+[2026-09-17 15:58:38] [INFO] cross-phase resume: optimizer reset
+[2026-09-17 15:58:38] [INFO] t_anchor params: 12  lr=2e-04 (base=2e-05)
+[2026-09-17 15:58:38] [INFO] Phase 2: optimizer rebuilt with new components
+[2026-09-17 15:58:38] [INFO] ==================== Phase 2: Cascade + Fusion Joint Training ====================
+[2026-09-17 15:58:38] [INFO]  epochs=10  lr=2e-05  fusion_w=1.0  wsm_w=0.0  delta_scale=10.0  lpips_w=0.0  blurry_lr=4e-06
+[2026-09-17 15:58:38] [INFO] ============================================================
+[2026-09-17 16:11:39] [INFO] epoch= 1/10 step=  200/2640 (  8%) | loss=0.1104  bwd=0.0279  fwd=0.0276  fus=0.0549  recon=0.0277  offset=2.0306  lpips=0.00000  fus_recon=0.0549  wsm=0.0092
+[2026-09-17 16:24:40] [INFO] epoch= 1/10 step=  400/2640 ( 15%) | loss=0.1058  bwd=0.0277  fwd=0.0276  fus=0.0505  recon=0.0277  offset=2.0179  lpips=0.00000  fus_recon=0.0505  wsm=0.0095
+[2026-09-17 16:37:39] [INFO] epoch= 1/10 step=  600/2640 ( 23%) | loss=0.1004  bwd=0.0266  fwd=0.0264  fus=0.0474  recon=0.0265  offset=1.9936  lpips=0.00000  fus_recon=0.0474  wsm=0.0092
+[2026-09-17 16:50:39] [INFO] epoch= 1/10 step=  800/2640 ( 30%) | loss=0.0978  bwd=0.0260  fwd=0.0260  fus=0.0458  recon=0.0260  offset=2.0549  lpips=0.00000  fus_recon=0.0458  wsm=0.0092
+[2026-09-17 17:03:37] [INFO] epoch= 1/10 step= 1000/2640 ( 38%) | loss=0.0955  bwd=0.0255  fwd=0.0254  fus=0.0445  recon=0.0255  offset=2.1369  lpips=0.00000  fus_recon=0.0445  wsm=0.0091
+[2026-09-17 17:16:37] [INFO] epoch= 1/10 step= 1200/2640 ( 45%) | loss=0.0934  bwd=0.0250  fwd=0.0250  fus=0.0435  recon=0.0250  offset=2.2385  lpips=0.00000  fus_recon=0.0435  wsm=0.0091
+[2026-09-17 17:29:37] [INFO] epoch= 1/10 step= 1400/2640 ( 53%) | loss=0.0921  bwd=0.0247  fwd=0.0247  fus=0.0427  recon=0.0247  offset=2.2918  lpips=0.00000  fus_recon=0.0427  wsm=0.0091
+[2026-09-17 17:42:37] [INFO] epoch= 1/10 step= 1600/2640 ( 61%) | loss=0.0911  bwd=0.0245  fwd=0.0244  fus=0.0421  recon=0.0245  offset=2.3160  lpips=0.00000  fus_recon=0.0421  wsm=0.0090
+[2026-09-17 17:55:37] [INFO] epoch= 1/10 step= 1800/2640 ( 68%) | loss=0.0905  bwd=0.0244  fwd=0.0244  fus=0.0418  recon=0.0244  offset=2.2726  lpips=0.00000  fus_recon=0.0418  wsm=0.0090
+[2026-09-17 18:08:36] [INFO] epoch= 1/10 step= 2000/2640 ( 76%) | loss=0.0898  bwd=0.0242  fwd=0.0242  fus=0.0413  recon=0.0242  offset=2.2575  lpips=0.00000  fus_recon=0.0413  wsm=0.0091
+[2026-09-17 18:21:36] [INFO] epoch= 1/10 step= 2200/2640 ( 83%) | loss=0.0892  bwd=0.0241  fwd=0.0241  fus=0.0409  recon=0.0241  offset=2.2119  lpips=0.00000  fus_recon=0.0409  wsm=0.0090
+[2026-09-17 18:34:37] [INFO] epoch= 1/10 step= 2400/2640 ( 91%) | loss=0.0889  bwd=0.0241  fwd=0.0241  fus=0.0407  recon=0.0241  offset=2.1774  lpips=0.00000  fus_recon=0.0407  wsm=0.0090
+[2026-09-17 18:47:38] [INFO] epoch= 1/10 step= 2600/2640 ( 98%) | loss=0.0885  bwd=0.0241  fwd=0.0240  fus=0.0405  recon=0.0240  offset=2.1324  lpips=0.00000  fus_recon=0.0405  wsm=0.0091
+[2026-09-17 18:50:14] [INFO] ckpt saved: ckpt_epoch1.pth
+[2026-09-17 18:56:51] [INFO] ===== epoch 1/10 done =====
+[2026-09-17 18:56:51] [INFO]   train:   loss=0.0884  recon=0.0240  offset=2.1215  lpips=0.00000
+[2026-09-17 18:56:51] [INFO]   ===== Cascade =====
+[2026-09-17 18:56:51] [INFO]   PSNR fwd: total=24.56  static=25.35  dynamic=24.27
+[2026-09-17 18:56:51] [INFO]   PSNR bwd: total=24.39  static=24.96  dynamic=24.25
+[2026-09-17 18:56:51] [INFO]   SSIM fwd: total=0.7495  static=0.7161  dynamic=0.7628
+[2026-09-17 18:56:51] [INFO]   SSIM bwd: total=0.7473  static=0.7158  dynamic=0.7620
+[2026-09-17 18:56:51] [INFO]   LPIPS Cascade: fwd=0.3137  bwd=0.3195
+[2026-09-17 18:56:51] [INFO]   ===== Fusion =====
+[2026-09-17 18:56:51] [INFO]   PSNR:  total=26.70  static=29.99  dynamic=25.94
+[2026-09-17 18:56:51] [INFO]   SSIM:  total=0.8059  static=0.8239  dynamic=0.7976
+[2026-09-17 18:56:51] [INFO]   LPIPS Fusion: 0.2511
+[2026-09-17 18:56:51] [INFO]   weights: w0=0.45  w1=0.41  w2=0.06  w3=0.07  delta=0.0146
+[2026-09-17 18:56:51] [INFO]   loss: recon=0.0404  wsm=0.0091  lpips=0.00000
+[2026-09-17 18:56:51] [INFO]   gap: cascade_fwd=0.0361  cascade_bwd=0.0368  fusion=0.0340  gt_warp_fwd=0.0831  gt_warp_bwd=0.0840
+[2026-09-17 18:56:51] [INFO]   speed: 89.3ms/frame
+[2026-09-17 18:56:51] [INFO] best ckpt: epoch=1  metric=26.7027
+[2026-09-17 18:57:54] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_001
+[2026-09-17 19:09:48] [INFO] epoch= 2/10 step=  200/2640 (  8%) | loss=0.0848  bwd=0.0236  fwd=0.0236  fus=0.0376  recon=0.0236  offset=1.6449  lpips=0.00000  fus_recon=0.0376  wsm=0.0098
+[2026-09-17 19:21:40] [INFO] epoch= 2/10 step=  400/2640 ( 15%) | loss=0.0832  bwd=0.0231  fwd=0.0230  fus=0.0372  recon=0.0230  offset=1.6382  lpips=0.00000  fus_recon=0.0372  wsm=0.0096
+[2026-09-17 19:33:32] [INFO] epoch= 2/10 step=  600/2640 ( 23%) | loss=0.0831  bwd=0.0230  fwd=0.0230  fus=0.0371  recon=0.0230  offset=1.5784  lpips=0.00000  fus_recon=0.0371  wsm=0.0096
+[2026-09-17 19:45:24] [INFO] epoch= 2/10 step=  800/2640 ( 30%) | loss=0.0826  bwd=0.0228  fwd=0.0228  fus=0.0369  recon=0.0228  offset=1.5819  lpips=0.00000  fus_recon=0.0369  wsm=0.0096
+[2026-09-17 19:57:15] [INFO] epoch= 2/10 step= 1000/2640 ( 38%) | loss=0.0823  bwd=0.0228  fwd=0.0227  fus=0.0368  recon=0.0227  offset=1.5543  lpips=0.00000  fus_recon=0.0368  wsm=0.0097
+[2026-09-17 20:09:07] [INFO] epoch= 2/10 step= 1200/2640 ( 45%) | loss=0.0822  bwd=0.0227  fwd=0.0227  fus=0.0368  recon=0.0227  offset=1.5291  lpips=0.00000  fus_recon=0.0368  wsm=0.0097
+[2026-09-17 20:20:59] [INFO] epoch= 2/10 step= 1400/2640 ( 53%) | loss=0.0816  bwd=0.0225  fwd=0.0225  fus=0.0366  recon=0.0225  offset=1.4701  lpips=0.00000  fus_recon=0.0366  wsm=0.0097
+[2026-09-17 20:32:52] [INFO] epoch= 2/10 step= 1600/2640 ( 61%) | loss=0.0816  bwd=0.0225  fwd=0.0225  fus=0.0365  recon=0.0225  offset=1.4309  lpips=0.00000  fus_recon=0.0365  wsm=0.0098
+[2026-09-17 20:44:44] [INFO] epoch= 2/10 step= 1800/2640 ( 68%) | loss=0.0811  bwd=0.0224  fwd=0.0224  fus=0.0363  recon=0.0224  offset=1.4099  lpips=0.00000  fus_recon=0.0363  wsm=0.0098
+[2026-09-17 20:56:37] [INFO] epoch= 2/10 step= 2000/2640 ( 76%) | loss=0.0811  bwd=0.0224  fwd=0.0224  fus=0.0363  recon=0.0224  offset=1.3915  lpips=0.00000  fus_recon=0.0363  wsm=0.0099
+[2026-09-17 21:08:30] [INFO] epoch= 2/10 step= 2200/2640 ( 83%) | loss=0.0812  bwd=0.0224  fwd=0.0224  fus=0.0364  recon=0.0224  offset=1.5360  lpips=0.00000  fus_recon=0.0364  wsm=0.0099
+[2026-09-17 21:20:25] [INFO] epoch= 2/10 step= 2400/2640 ( 91%) | loss=0.0815  bwd=0.0225  fwd=0.0225  fus=0.0364  recon=0.0225  offset=1.5208  lpips=0.00000  fus_recon=0.0364  wsm=0.0100
+[2026-09-17 21:32:17] [INFO] epoch= 2/10 step= 2600/2640 ( 98%) | loss=0.0814  bwd=0.0225  fwd=0.0225  fus=0.0364  recon=0.0225  offset=1.5223  lpips=0.00000  fus_recon=0.0364  wsm=0.0100
+[2026-09-17 21:34:39] [INFO] ckpt saved: ckpt_epoch2.pth
+[2026-09-17 21:40:53] [INFO] ===== epoch 2/10 done =====
+[2026-09-17 21:40:53] [INFO]   train:   loss=0.0814  recon=0.0225  offset=1.5257  lpips=0.00000
+[2026-09-17 21:40:53] [INFO]   ===== Cascade =====
+[2026-09-17 21:40:53] [INFO]   PSNR fwd: total=24.55  static=25.38  dynamic=24.26
+[2026-09-17 21:40:53] [INFO]   PSNR bwd: total=24.34  static=24.89  dynamic=24.31
+[2026-09-17 21:40:53] [INFO]   SSIM fwd: total=0.7525  static=0.7233  dynamic=0.7644
+[2026-09-17 21:40:53] [INFO]   SSIM bwd: total=0.7483  static=0.7194  dynamic=0.7635
+[2026-09-17 21:40:53] [INFO]   LPIPS Cascade: fwd=0.3114  bwd=0.3166
+[2026-09-17 21:40:53] [INFO]   ===== Fusion =====
+[2026-09-17 21:40:53] [INFO]   PSNR:  total=26.64  static=30.19  dynamic=25.81
+[2026-09-17 21:40:53] [INFO]   SSIM:  total=0.8079  static=0.8262  dynamic=0.7992
+[2026-09-17 21:40:53] [INFO]   LPIPS Fusion: 0.2432
+[2026-09-17 21:40:53] [INFO]   weights: w0=0.40  w1=0.42  w2=0.10  w3=0.09  delta=0.0182
+[2026-09-17 21:40:53] [INFO]   loss: recon=0.0364  wsm=0.0101  lpips=0.00000
+[2026-09-17 21:40:53] [INFO]   gap: cascade_fwd=0.0363  cascade_bwd=0.0371  fusion=0.0342  gt_warp_fwd=0.0833  gt_warp_bwd=0.0841
+[2026-09-17 21:40:53] [INFO]   speed: 82.3ms/frame
+[2026-09-17 21:41:56] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_002
+[2026-09-17 21:53:48] [INFO] epoch= 3/10 step=  200/2640 (  8%) | loss=0.0807  bwd=0.0223  fwd=0.0222  fus=0.0362  recon=0.0223  offset=1.3262  lpips=0.00000  fus_recon=0.0362  wsm=0.0109
+[2026-09-17 22:06:00] [INFO] epoch= 3/10 step=  400/2640 ( 15%) | loss=0.0792  bwd=0.0219  fwd=0.0218  fus=0.0355  recon=0.0219  offset=1.3356  lpips=0.00000  fus_recon=0.0355  wsm=0.0110
+[2026-09-17 22:18:31] [INFO] epoch= 3/10 step=  600/2640 ( 23%) | loss=0.0794  bwd=0.0220  fwd=0.0219  fus=0.0355  recon=0.0219  offset=1.3029  lpips=0.00000  fus_recon=0.0355  wsm=0.0109
+[2026-09-17 22:31:01] [INFO] epoch= 3/10 step=  800/2640 ( 30%) | loss=0.0793  bwd=0.0219  fwd=0.0219  fus=0.0355  recon=0.0219  offset=1.3420  lpips=0.00000  fus_recon=0.0355  wsm=0.0109
+[2026-09-17 22:43:32] [INFO] epoch= 3/10 step= 1000/2640 ( 38%) | loss=0.0794  bwd=0.0220  fwd=0.0219  fus=0.0355  recon=0.0219  offset=1.3576  lpips=0.00000  fus_recon=0.0355  wsm=0.0111
+[2026-09-17 22:56:04] [INFO] epoch= 3/10 step= 1200/2640 ( 45%) | loss=0.0794  bwd=0.0220  fwd=0.0219  fus=0.0355  recon=0.0219  offset=1.3634  lpips=0.00000  fus_recon=0.0355  wsm=0.0111
+[2026-09-17 23:08:40] [INFO] epoch= 3/10 step= 1400/2640 ( 53%) | loss=0.0798  bwd=0.0221  fwd=0.0221  fus=0.0356  recon=0.0221  offset=1.3915  lpips=0.00000  fus_recon=0.0356  wsm=0.0112
+[2026-09-17 23:21:14] [INFO] epoch= 3/10 step= 1600/2640 ( 61%) | loss=0.0801  bwd=0.0222  fwd=0.0222  fus=0.0357  recon=0.0222  offset=1.4212  lpips=0.00000  fus_recon=0.0357  wsm=0.0113
+[2026-09-17 23:33:48] [INFO] epoch= 3/10 step= 1800/2640 ( 68%) | loss=0.0803  bwd=0.0223  fwd=0.0223  fus=0.0357  recon=0.0223  offset=1.4186  lpips=0.00000  fus_recon=0.0357  wsm=0.0113
+[2026-09-17 23:46:21] [INFO] epoch= 3/10 step= 2000/2640 ( 76%) | loss=0.0801  bwd=0.0222  fwd=0.0222  fus=0.0356  recon=0.0222  offset=1.4207  lpips=0.00000  fus_recon=0.0356  wsm=0.0113
+[2026-09-17 23:58:53] [INFO] epoch= 3/10 step= 2200/2640 ( 83%) | loss=0.0802  bwd=0.0223  fwd=0.0223  fus=0.0356  recon=0.0223  offset=1.4118  lpips=0.00000  fus_recon=0.0356  wsm=0.0114
+[2026-09-18 00:11:27] [INFO] epoch= 3/10 step= 2400/2640 ( 91%) | loss=0.0801  bwd=0.0222  fwd=0.0222  fus=0.0356  recon=0.0222  offset=1.4062  lpips=0.00000  fus_recon=0.0356  wsm=0.0114
+[2026-09-18 00:23:58] [INFO] epoch= 3/10 step= 2600/2640 ( 98%) | loss=0.0800  bwd=0.0222  fwd=0.0222  fus=0.0355  recon=0.0222  offset=1.4436  lpips=0.00000  fus_recon=0.0355  wsm=0.0115
+[2026-09-18 00:26:28] [INFO] ckpt saved: ckpt_epoch3.pth
+[2026-09-18 00:33:30] [INFO] ===== epoch 3/10 done =====
+[2026-09-18 00:33:30] [INFO]   train:   loss=0.0800  recon=0.0222  offset=1.4460  lpips=0.00000
+[2026-09-18 00:33:30] [INFO]   ===== Cascade =====
+[2026-09-18 00:33:30] [INFO]   PSNR fwd: total=24.61  static=25.46  dynamic=24.36
+[2026-09-18 00:33:30] [INFO]   PSNR bwd: total=24.30  static=24.85  dynamic=24.27
+[2026-09-18 00:33:30] [INFO]   SSIM fwd: total=0.7579  static=0.7328  dynamic=0.7681
+[2026-09-18 00:33:30] [INFO]   SSIM bwd: total=0.7471  static=0.7147  dynamic=0.7636
+[2026-09-18 00:33:30] [INFO]   LPIPS Cascade: fwd=0.3028  bwd=0.3129
+[2026-09-18 00:33:30] [INFO]   ===== Fusion =====
+[2026-09-18 00:33:30] [INFO]   PSNR:  total=26.78  static=30.20  dynamic=26.01
+[2026-09-18 00:33:30] [INFO]   SSIM:  total=0.8098  static=0.8288  dynamic=0.8013
+[2026-09-18 00:33:30] [INFO]   LPIPS Fusion: 0.2373
+[2026-09-18 00:33:30] [INFO]   weights: w0=0.43  w1=0.36  w2=0.13  w3=0.08  delta=0.0127
+[2026-09-18 00:33:30] [INFO]   loss: recon=0.0355  wsm=0.0115  lpips=0.00000
+[2026-09-18 00:33:30] [INFO]   gap: cascade_fwd=0.0357  cascade_bwd=0.0369  fusion=0.0335  gt_warp_fwd=0.0833  gt_warp_bwd=0.0839
+[2026-09-18 00:33:30] [INFO]   speed: 82.7ms/frame
+[2026-09-18 00:33:30] [INFO] best ckpt: epoch=3  metric=26.7755
+[2026-09-18 00:34:33] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_003
+[2026-09-18 00:46:52] [INFO] epoch= 4/10 step=  200/2640 (  8%) | loss=0.0797  bwd=0.0222  fwd=0.0223  fus=0.0352  recon=0.0223  offset=1.6775  lpips=0.00000  fus_recon=0.0352  wsm=0.0121
+[2026-09-18 00:59:08] [INFO] epoch= 4/10 step=  400/2640 ( 15%) | loss=0.0810  bwd=0.0227  fwd=0.0227  fus=0.0357  recon=0.0227  offset=1.5896  lpips=0.00000  fus_recon=0.0357  wsm=0.0121
+[2026-09-18 01:11:25] [INFO] epoch= 4/10 step=  600/2640 ( 23%) | loss=0.0799  bwd=0.0224  fwd=0.0223  fus=0.0352  recon=0.0223  offset=1.5467  lpips=0.00000  fus_recon=0.0352  wsm=0.0122
+[2026-09-18 01:23:41] [INFO] epoch= 4/10 step=  800/2640 ( 30%) | loss=0.0792  bwd=0.0221  fwd=0.0220  fus=0.0350  recon=0.0221  offset=1.4958  lpips=0.00000  fus_recon=0.0350  wsm=0.0123
+[2026-09-18 01:35:58] [INFO] epoch= 4/10 step= 1000/2640 ( 38%) | loss=0.0791  bwd=0.0221  fwd=0.0220  fus=0.0349  recon=0.0221  offset=1.4566  lpips=0.00000  fus_recon=0.0349  wsm=0.0124
+[2026-09-18 01:48:17] [INFO] epoch= 4/10 step= 1200/2640 ( 45%) | loss=0.0788  bwd=0.0220  fwd=0.0220  fus=0.0349  recon=0.0220  offset=1.3951  lpips=0.00000  fus_recon=0.0349  wsm=0.0125
+[2026-09-18 02:00:23] [INFO] epoch= 4/10 step= 1400/2640 ( 53%) | loss=0.0790  bwd=0.0221  fwd=0.0220  fus=0.0349  recon=0.0221  offset=1.3638  lpips=0.00000  fus_recon=0.0349  wsm=0.0126
+[2026-09-18 02:12:35] [INFO] epoch= 4/10 step= 1600/2640 ( 61%) | loss=0.0789  bwd=0.0220  fwd=0.0220  fus=0.0349  recon=0.0220  offset=1.3683  lpips=0.00000  fus_recon=0.0349  wsm=0.0127
+[2026-09-18 02:24:47] [INFO] epoch= 4/10 step= 1800/2640 ( 68%) | loss=0.0794  bwd=0.0222  fwd=0.0221  fus=0.0350  recon=0.0222  offset=1.3557  lpips=0.00000  fus_recon=0.0350  wsm=0.0128
+[2026-09-18 02:36:59] [INFO] epoch= 4/10 step= 2000/2640 ( 76%) | loss=0.0794  bwd=0.0222  fwd=0.0221  fus=0.0351  recon=0.0222  offset=1.4128  lpips=0.00000  fus_recon=0.0351  wsm=0.0129
+[2026-09-18 02:49:09] [INFO] epoch= 4/10 step= 2200/2640 ( 83%) | loss=0.0793  bwd=0.0222  fwd=0.0221  fus=0.0350  recon=0.0221  offset=1.4273  lpips=0.00000  fus_recon=0.0350  wsm=0.0129
+[2026-09-18 03:01:09] [INFO] epoch= 4/10 step= 2400/2640 ( 91%) | loss=0.0791  bwd=0.0221  fwd=0.0221  fus=0.0350  recon=0.0221  offset=1.4016  lpips=0.00000  fus_recon=0.0350  wsm=0.0130
+[2026-09-18 03:13:20] [INFO] epoch= 4/10 step= 2600/2640 ( 98%) | loss=0.0790  bwd=0.0221  fwd=0.0220  fus=0.0349  recon=0.0221  offset=1.3927  lpips=0.00000  fus_recon=0.0349  wsm=0.0131
+[2026-09-18 03:15:48] [INFO] ckpt saved: ckpt_epoch4.pth
+[2026-09-18 03:22:05] [INFO] ===== epoch 4/10 done =====
+[2026-09-18 03:22:05] [INFO]   train:   loss=0.0791  recon=0.0221  offset=1.3943  lpips=0.00000
+[2026-09-18 03:22:05] [INFO]   ===== Cascade =====
+[2026-09-18 03:22:05] [INFO]   PSNR fwd: total=24.46  static=25.04  dynamic=24.37
+[2026-09-18 03:22:05] [INFO]   PSNR bwd: total=24.49  static=25.14  dynamic=24.43
+[2026-09-18 03:22:05] [INFO]   SSIM fwd: total=0.7528  static=0.7217  dynamic=0.7657
+[2026-09-18 03:22:05] [INFO]   SSIM bwd: total=0.7526  static=0.7279  dynamic=0.7663
+[2026-09-18 03:22:05] [INFO]   LPIPS Cascade: fwd=0.3085  bwd=0.3083
+[2026-09-18 03:22:05] [INFO]   ===== Fusion =====
+[2026-09-18 03:22:05] [INFO]   PSNR:  total=27.09  static=30.50  dynamic=26.33
+[2026-09-18 03:22:05] [INFO]   SSIM:  total=0.8141  static=0.8306  dynamic=0.8069
+[2026-09-18 03:22:05] [INFO]   LPIPS Fusion: 0.2341
+[2026-09-18 03:22:05] [INFO]   weights: w0=0.40  w1=0.41  w2=0.11  w3=0.08  delta=0.0127
+[2026-09-18 03:22:05] [INFO]   loss: recon=0.0350  wsm=0.0131  lpips=0.00000
+[2026-09-18 03:22:05] [INFO]   gap: cascade_fwd=0.0363  cascade_bwd=0.0363  fusion=0.0322  gt_warp_fwd=0.0833  gt_warp_bwd=0.0839
+[2026-09-18 03:22:05] [INFO]   speed: 83.0ms/frame
+[2026-09-18 03:22:05] [INFO] best ckpt: epoch=4  metric=27.0909
+[2026-09-18 03:23:08] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_004
+[2026-09-18 03:35:03] [INFO] epoch= 5/10 step=  200/2640 (  8%) | loss=0.0778  bwd=0.0215  fwd=0.0219  fus=0.0343  recon=0.0217  offset=1.3358  lpips=0.00000  fus_recon=0.0343  wsm=0.0141
+[2026-09-18 03:47:00] [INFO] epoch= 5/10 step=  400/2640 ( 15%) | loss=0.0800  bwd=0.0224  fwd=0.0225  fus=0.0351  recon=0.0224  offset=1.2649  lpips=0.00000  fus_recon=0.0351  wsm=0.0142
+[2026-09-18 03:58:55] [INFO] epoch= 5/10 step=  600/2640 ( 23%) | loss=0.0801  bwd=0.0225  fwd=0.0225  fus=0.0351  recon=0.0225  offset=1.2382  lpips=0.00000  fus_recon=0.0351  wsm=0.0141
+[2026-09-18 04:10:49] [INFO] epoch= 5/10 step=  800/2640 ( 30%) | loss=0.0797  bwd=0.0224  fwd=0.0224  fus=0.0349  recon=0.0224  offset=1.3970  lpips=0.00000  fus_recon=0.0349  wsm=0.0140
+[2026-09-18 04:22:44] [INFO] epoch= 5/10 step= 1000/2640 ( 38%) | loss=0.0799  bwd=0.0224  fwd=0.0225  fus=0.0350  recon=0.0225  offset=1.4412  lpips=0.00000  fus_recon=0.0350  wsm=0.0141
+[2026-09-18 04:34:38] [INFO] epoch= 5/10 step= 1200/2640 ( 45%) | loss=0.0792  bwd=0.0222  fwd=0.0222  fus=0.0348  recon=0.0222  offset=1.4672  lpips=0.00000  fus_recon=0.0348  wsm=0.0142
+[2026-09-18 04:46:34] [INFO] epoch= 5/10 step= 1400/2640 ( 53%) | loss=0.0787  bwd=0.0220  fwd=0.0221  fus=0.0346  recon=0.0221  offset=1.4530  lpips=0.00000  fus_recon=0.0346  wsm=0.0143
+[2026-09-18 04:58:28] [INFO] epoch= 5/10 step= 1600/2640 ( 61%) | loss=0.0787  bwd=0.0220  fwd=0.0221  fus=0.0346  recon=0.0221  offset=1.4684  lpips=0.00000  fus_recon=0.0346  wsm=0.0144
+[2026-09-18 05:10:23] [INFO] epoch= 5/10 step= 1800/2640 ( 68%) | loss=0.0785  bwd=0.0220  fwd=0.0220  fus=0.0346  recon=0.0220  offset=1.4765  lpips=0.00000  fus_recon=0.0346  wsm=0.0145
+[2026-09-18 05:22:17] [INFO] epoch= 5/10 step= 2000/2640 ( 76%) | loss=0.0785  bwd=0.0220  fwd=0.0220  fus=0.0346  recon=0.0220  offset=1.4781  lpips=0.00000  fus_recon=0.0346  wsm=0.0145
+[2026-09-18 05:34:11] [INFO] epoch= 5/10 step= 2200/2640 ( 83%) | loss=0.0783  bwd=0.0219  fwd=0.0219  fus=0.0345  recon=0.0219  offset=1.4803  lpips=0.00000  fus_recon=0.0345  wsm=0.0146
+[2026-09-18 05:46:06] [INFO] epoch= 5/10 step= 2400/2640 ( 91%) | loss=0.0783  bwd=0.0219  fwd=0.0219  fus=0.0345  recon=0.0219  offset=1.5029  lpips=0.00000  fus_recon=0.0345  wsm=0.0147
+[2026-09-18 05:58:03] [INFO] epoch= 5/10 step= 2600/2640 ( 98%) | loss=0.0784  bwd=0.0219  fwd=0.0220  fus=0.0345  recon=0.0219  offset=1.5071  lpips=0.00000  fus_recon=0.0345  wsm=0.0147
+[2026-09-18 06:00:26] [INFO] ckpt saved: ckpt_epoch5.pth
+[2026-09-18 06:06:42] [INFO] ===== epoch 5/10 done =====
+[2026-09-18 06:06:42] [INFO]   train:   loss=0.0784  recon=0.0219  offset=1.5088  lpips=0.00000
+[2026-09-18 06:06:42] [INFO]   ===== Cascade =====
+[2026-09-18 06:06:42] [INFO]   PSNR fwd: total=24.64  static=25.37  dynamic=24.50
+[2026-09-18 06:06:42] [INFO]   PSNR bwd: total=24.27  static=24.66  dynamic=24.43
+[2026-09-18 06:06:42] [INFO]   SSIM fwd: total=0.7592  static=0.7368  dynamic=0.7692
+[2026-09-18 06:06:42] [INFO]   SSIM bwd: total=0.7489  static=0.7195  dynamic=0.7653
+[2026-09-18 06:06:42] [INFO]   LPIPS Cascade: fwd=0.3036  bwd=0.3101
+[2026-09-18 06:06:42] [INFO]   ===== Fusion =====
+[2026-09-18 06:06:42] [INFO]   PSNR:  total=27.15  static=30.75  dynamic=26.36
+[2026-09-18 06:06:42] [INFO]   SSIM:  total=0.8145  static=0.8342  dynamic=0.8061
+[2026-09-18 06:06:42] [INFO]   LPIPS Fusion: 0.2279
+[2026-09-18 06:06:42] [INFO]   weights: w0=0.41  w1=0.36  w2=0.12  w3=0.11  delta=0.0130
+[2026-09-18 06:06:42] [INFO]   loss: recon=0.0345  wsm=0.0147  lpips=0.00000
+[2026-09-18 06:06:42] [INFO]   gap: cascade_fwd=0.0355  cascade_bwd=0.0370  fusion=0.0319  gt_warp_fwd=0.0833  gt_warp_bwd=0.0839
+[2026-09-18 06:06:42] [INFO]   speed: 82.9ms/frame
+[2026-09-18 06:06:42] [INFO] best ckpt: epoch=5  metric=27.1539
+[2026-09-18 06:07:45] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_005
+[2026-09-18 06:19:42] [INFO] epoch= 6/10 step=  200/2640 (  8%) | loss=0.0774  bwd=0.0217  fwd=0.0218  fus=0.0340  recon=0.0217  offset=1.4285  lpips=0.00000  fus_recon=0.0340  wsm=0.0156
+[2026-09-18 06:31:36] [INFO] epoch= 6/10 step=  400/2640 ( 15%) | loss=0.0785  bwd=0.0219  fwd=0.0221  fus=0.0344  recon=0.0220  offset=1.4713  lpips=0.00000  fus_recon=0.0344  wsm=0.0155
+[2026-09-18 06:43:30] [INFO] epoch= 6/10 step=  600/2640 ( 23%) | loss=0.0782  bwd=0.0219  fwd=0.0219  fus=0.0344  recon=0.0219  offset=1.4497  lpips=0.00000  fus_recon=0.0344  wsm=0.0157
+[2026-09-18 06:55:25] [INFO] epoch= 6/10 step=  800/2640 ( 30%) | loss=0.0785  bwd=0.0219  fwd=0.0220  fus=0.0345  recon=0.0220  offset=1.4063  lpips=0.00000  fus_recon=0.0345  wsm=0.0157
+[2026-09-18 07:07:20] [INFO] epoch= 6/10 step= 1000/2640 ( 38%) | loss=0.0787  bwd=0.0220  fwd=0.0221  fus=0.0346  recon=0.0220  offset=1.3759  lpips=0.00000  fus_recon=0.0346  wsm=0.0158
+[2026-09-18 07:19:14] [INFO] epoch= 6/10 step= 1200/2640 ( 45%) | loss=0.0785  bwd=0.0220  fwd=0.0220  fus=0.0345  recon=0.0220  offset=1.4205  lpips=0.00000  fus_recon=0.0345  wsm=0.0158
+[2026-09-18 07:31:09] [INFO] epoch= 6/10 step= 1400/2640 ( 53%) | loss=0.0784  bwd=0.0219  fwd=0.0220  fus=0.0344  recon=0.0220  offset=1.4351  lpips=0.00000  fus_recon=0.0344  wsm=0.0158
+[2026-09-18 07:43:06] [INFO] epoch= 6/10 step= 1600/2640 ( 61%) | loss=0.0783  bwd=0.0219  fwd=0.0220  fus=0.0344  recon=0.0219  offset=1.4440  lpips=0.00000  fus_recon=0.0344  wsm=0.0159
+[2026-09-18 07:54:59] [INFO] epoch= 6/10 step= 1800/2640 ( 68%) | loss=0.0780  bwd=0.0218  fwd=0.0219  fus=0.0343  recon=0.0219  offset=1.4369  lpips=0.00000  fus_recon=0.0343  wsm=0.0159
+[2026-09-18 08:06:55] [INFO] epoch= 6/10 step= 2000/2640 ( 76%) | loss=0.0781  bwd=0.0219  fwd=0.0219  fus=0.0343  recon=0.0219  offset=1.4503  lpips=0.00000  fus_recon=0.0343  wsm=0.0159
+[2026-09-18 08:18:52] [INFO] epoch= 6/10 step= 2200/2640 ( 83%) | loss=0.0781  bwd=0.0219  fwd=0.0219  fus=0.0343  recon=0.0219  offset=1.4347  lpips=0.00000  fus_recon=0.0343  wsm=0.0160
+[2026-09-18 08:30:46] [INFO] epoch= 6/10 step= 2400/2640 ( 91%) | loss=0.0782  bwd=0.0219  fwd=0.0219  fus=0.0343  recon=0.0219  offset=1.4236  lpips=0.00000  fus_recon=0.0343  wsm=0.0160
+[2026-09-18 08:42:40] [INFO] epoch= 6/10 step= 2600/2640 ( 98%) | loss=0.0779  bwd=0.0218  fwd=0.0218  fus=0.0342  recon=0.0218  offset=1.4176  lpips=0.00000  fus_recon=0.0342  wsm=0.0161
+[2026-09-18 08:45:04] [INFO] ckpt saved: ckpt_epoch6.pth
+[2026-09-18 08:51:21] [INFO] ===== epoch 6/10 done =====
+[2026-09-18 08:51:21] [INFO]   train:   loss=0.0779  recon=0.0218  offset=1.4213  lpips=0.00000
+[2026-09-18 08:51:21] [INFO]   ===== Cascade =====
+[2026-09-18 08:51:21] [INFO]   PSNR fwd: total=24.49  static=25.11  dynamic=24.44
+[2026-09-18 08:51:21] [INFO]   PSNR bwd: total=23.85  static=23.97  dynamic=24.19
+[2026-09-18 08:51:21] [INFO]   SSIM fwd: total=0.7564  static=0.7302  dynamic=0.7679
+[2026-09-18 08:51:21] [INFO]   SSIM bwd: total=0.7419  static=0.7099  dynamic=0.7593
+[2026-09-18 08:51:21] [INFO]   LPIPS Cascade: fwd=0.3042  bwd=0.3109
+[2026-09-18 08:51:21] [INFO]   ===== Fusion =====
+[2026-09-18 08:51:21] [INFO]   PSNR:  total=27.07  static=30.58  dynamic=26.27
+[2026-09-18 08:51:21] [INFO]   SSIM:  total=0.8152  static=0.8310  dynamic=0.8077
+[2026-09-18 08:51:21] [INFO]   LPIPS Fusion: 0.2268
+[2026-09-18 08:51:21] [INFO]   weights: w0=0.43  w1=0.35  w2=0.12  w3=0.10  delta=0.0123
+[2026-09-18 08:51:21] [INFO]   loss: recon=0.0342  wsm=0.0161  lpips=0.00000
+[2026-09-18 08:51:21] [INFO]   gap: cascade_fwd=0.0359  cascade_bwd=0.0387  fusion=0.0323  gt_warp_fwd=0.0833  gt_warp_bwd=0.0839
+[2026-09-18 08:51:21] [INFO]   speed: 83.3ms/frame
+[2026-09-18 08:52:24] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_006
+[2026-09-18 09:04:19] [INFO] epoch= 7/10 step=  200/2640 (  8%) | loss=0.0776  bwd=0.0217  fwd=0.0218  fus=0.0341  recon=0.0217  offset=1.5868  lpips=0.00000  fus_recon=0.0341  wsm=0.0168
+[2026-09-18 09:16:15] [INFO] epoch= 7/10 step=  400/2640 ( 15%) | loss=0.0774  bwd=0.0217  fwd=0.0217  fus=0.0340  recon=0.0217  offset=1.4567  lpips=0.00000  fus_recon=0.0340  wsm=0.0168
+[2026-09-18 09:28:09] [INFO] epoch= 7/10 step=  600/2640 ( 23%) | loss=0.0772  bwd=0.0216  fwd=0.0216  fus=0.0339  recon=0.0216  offset=1.4132  lpips=0.00000  fus_recon=0.0339  wsm=0.0166
+[2026-09-18 09:40:04] [INFO] epoch= 7/10 step=  800/2640 ( 30%) | loss=0.0776  bwd=0.0217  fwd=0.0218  fus=0.0341  recon=0.0217  offset=1.4471  lpips=0.00000  fus_recon=0.0341  wsm=0.0167
+[2026-09-18 09:51:58] [INFO] epoch= 7/10 step= 1000/2640 ( 38%) | loss=0.0773  bwd=0.0217  fwd=0.0217  fus=0.0339  recon=0.0217  offset=1.4693  lpips=0.00000  fus_recon=0.0339  wsm=0.0167
+[2026-09-18 10:03:53] [INFO] epoch= 7/10 step= 1200/2640 ( 45%) | loss=0.0772  bwd=0.0217  fwd=0.0216  fus=0.0339  recon=0.0217  offset=1.5201  lpips=0.00000  fus_recon=0.0339  wsm=0.0167
+[2026-09-18 10:15:48] [INFO] epoch= 7/10 step= 1400/2640 ( 53%) | loss=0.0770  bwd=0.0216  fwd=0.0216  fus=0.0338  recon=0.0216  offset=1.5685  lpips=0.00000  fus_recon=0.0338  wsm=0.0168
+[2026-09-18 10:27:44] [INFO] epoch= 7/10 step= 1600/2640 ( 61%) | loss=0.0772  bwd=0.0217  fwd=0.0216  fus=0.0339  recon=0.0217  offset=1.6320  lpips=0.00000  fus_recon=0.0339  wsm=0.0168
+[2026-09-18 10:39:38] [INFO] epoch= 7/10 step= 1800/2640 ( 68%) | loss=0.0771  bwd=0.0216  fwd=0.0216  fus=0.0339  recon=0.0216  offset=1.7335  lpips=0.00000  fus_recon=0.0339  wsm=0.0169
+[2026-09-18 10:51:32] [INFO] epoch= 7/10 step= 2000/2640 ( 76%) | loss=0.0773  bwd=0.0217  fwd=0.0217  fus=0.0339  recon=0.0217  offset=1.7276  lpips=0.00000  fus_recon=0.0339  wsm=0.0169
+[2026-09-18 11:03:28] [INFO] epoch= 7/10 step= 2200/2640 ( 83%) | loss=0.0775  bwd=0.0218  fwd=0.0218  fus=0.0340  recon=0.0218  offset=1.6937  lpips=0.00000  fus_recon=0.0340  wsm=0.0170
+[2026-09-18 11:15:23] [INFO] epoch= 7/10 step= 2400/2640 ( 91%) | loss=0.0775  bwd=0.0218  fwd=0.0217  fus=0.0340  recon=0.0217  offset=1.6689  lpips=0.00000  fus_recon=0.0340  wsm=0.0170
+[2026-09-18 11:27:17] [INFO] epoch= 7/10 step= 2600/2640 ( 98%) | loss=0.0775  bwd=0.0218  fwd=0.0217  fus=0.0340  recon=0.0217  offset=1.6454  lpips=0.00000  fus_recon=0.0340  wsm=0.0170
+[2026-09-18 11:29:40] [INFO] ckpt saved: ckpt_epoch7.pth
+[2026-09-18 11:35:55] [INFO] ===== epoch 7/10 done =====
+[2026-09-18 11:35:55] [INFO]   train:   loss=0.0774  recon=0.0217  offset=1.6432  lpips=0.00000
+[2026-09-18 11:35:55] [INFO]   ===== Cascade =====
+[2026-09-18 11:35:55] [INFO]   PSNR fwd: total=24.54  static=25.15  dynamic=24.48
+[2026-09-18 11:35:55] [INFO]   PSNR bwd: total=24.13  static=24.35  dynamic=24.42
+[2026-09-18 11:35:55] [INFO]   SSIM fwd: total=0.7562  static=0.7302  dynamic=0.7685
+[2026-09-18 11:35:55] [INFO]   SSIM bwd: total=0.7450  static=0.7126  dynamic=0.7632
+[2026-09-18 11:35:55] [INFO]   LPIPS Cascade: fwd=0.3041  bwd=0.3108
+[2026-09-18 11:35:55] [INFO]   ===== Fusion =====
+[2026-09-18 11:35:55] [INFO]   PSNR:  total=27.19  static=30.88  dynamic=26.37
+[2026-09-18 11:35:55] [INFO]   SSIM:  total=0.8161  static=0.8344  dynamic=0.8079
+[2026-09-18 11:35:55] [INFO]   LPIPS Fusion: 0.2230
+[2026-09-18 11:35:55] [INFO]   weights: w0=0.38  w1=0.36  w2=0.13  w3=0.13  delta=0.0131
+[2026-09-18 11:35:55] [INFO]   loss: recon=0.0340  wsm=0.0170  lpips=0.00000
+[2026-09-18 11:35:55] [INFO]   gap: cascade_fwd=0.0359  cascade_bwd=0.0375  fusion=0.0316  gt_warp_fwd=0.0833  gt_warp_bwd=0.0839
+[2026-09-18 11:35:55] [INFO]   speed: 82.6ms/frame
+[2026-09-18 11:35:56] [INFO] best ckpt: epoch=7  metric=27.1937
+[2026-09-18 11:36:59] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_007
+[2026-09-18 11:48:54] [INFO] epoch= 8/10 step=  200/2640 (  8%) | loss=0.0776  bwd=0.0219  fwd=0.0217  fus=0.0339  recon=0.0218  offset=1.3915  lpips=0.00000  fus_recon=0.0339  wsm=0.0172
+[2026-09-18 12:00:49] [INFO] epoch= 8/10 step=  400/2640 ( 15%) | loss=0.0776  bwd=0.0220  fwd=0.0218  fus=0.0338  recon=0.0219  offset=1.5038  lpips=0.00000  fus_recon=0.0338  wsm=0.0174
+[2026-09-18 12:12:43] [INFO] epoch= 8/10 step=  600/2640 ( 23%) | loss=0.0764  bwd=0.0215  fwd=0.0214  fus=0.0334  recon=0.0215  offset=1.5272  lpips=0.00000  fus_recon=0.0334  wsm=0.0174
+[2026-09-18 12:24:39] [INFO] epoch= 8/10 step=  800/2640 ( 30%) | loss=0.0764  bwd=0.0215  fwd=0.0214  fus=0.0335  recon=0.0215  offset=1.5096  lpips=0.00000  fus_recon=0.0335  wsm=0.0176
+[2026-09-18 12:36:34] [INFO] epoch= 8/10 step= 1000/2640 ( 38%) | loss=0.0765  bwd=0.0215  fwd=0.0214  fus=0.0335  recon=0.0215  offset=1.4865  lpips=0.00000  fus_recon=0.0335  wsm=0.0176
+[2026-09-18 12:48:27] [INFO] epoch= 8/10 step= 1200/2640 ( 45%) | loss=0.0765  bwd=0.0215  fwd=0.0215  fus=0.0336  recon=0.0215  offset=1.4874  lpips=0.00000  fus_recon=0.0336  wsm=0.0177
+[2026-09-18 13:00:20] [INFO] epoch= 8/10 step= 1400/2640 ( 53%) | loss=0.0762  bwd=0.0214  fwd=0.0214  fus=0.0334  recon=0.0214  offset=1.4852  lpips=0.00000  fus_recon=0.0334  wsm=0.0176
+[2026-09-18 13:12:14] [INFO] epoch= 8/10 step= 1600/2640 ( 61%) | loss=0.0760  bwd=0.0213  fwd=0.0213  fus=0.0334  recon=0.0213  offset=1.4629  lpips=0.00000  fus_recon=0.0334  wsm=0.0177
+[2026-09-18 13:24:09] [INFO] epoch= 8/10 step= 1800/2640 ( 68%) | loss=0.0764  bwd=0.0215  fwd=0.0214  fus=0.0335  recon=0.0215  offset=1.5084  lpips=0.00000  fus_recon=0.0335  wsm=0.0177
+[2026-09-18 13:36:06] [INFO] epoch= 8/10 step= 2000/2640 ( 76%) | loss=0.0770  bwd=0.0217  fwd=0.0216  fus=0.0337  recon=0.0216  offset=1.5165  lpips=0.00000  fus_recon=0.0337  wsm=0.0178
+[2026-09-18 13:47:59] [INFO] epoch= 8/10 step= 2200/2640 ( 83%) | loss=0.0771  bwd=0.0217  fwd=0.0216  fus=0.0337  recon=0.0217  offset=1.5052  lpips=0.00000  fus_recon=0.0337  wsm=0.0179
+[2026-09-18 13:59:52] [INFO] epoch= 8/10 step= 2400/2640 ( 91%) | loss=0.0768  bwd=0.0216  fwd=0.0216  fus=0.0336  recon=0.0216  offset=1.4919  lpips=0.00000  fus_recon=0.0336  wsm=0.0179
+[2026-09-18 14:11:47] [INFO] epoch= 8/10 step= 2600/2640 ( 98%) | loss=0.0770  bwd=0.0217  fwd=0.0216  fus=0.0337  recon=0.0217  offset=1.4766  lpips=0.00000  fus_recon=0.0337  wsm=0.0179
+[2026-09-18 14:14:10] [INFO] ckpt saved: ckpt_epoch8.pth
+[2026-09-18 14:20:27] [INFO] ===== epoch 8/10 done =====
+[2026-09-18 14:20:27] [INFO]   train:   loss=0.0770  recon=0.0216  offset=1.4743  lpips=0.00000
+[2026-09-18 14:20:27] [INFO]   ===== Cascade =====
+[2026-09-18 14:20:27] [INFO]   PSNR fwd: total=24.56  static=25.17  dynamic=24.53
+[2026-09-18 14:20:27] [INFO]   PSNR bwd: total=23.97  static=24.14  dynamic=24.33
+[2026-09-18 14:20:27] [INFO]   SSIM fwd: total=0.7574  static=0.7314  dynamic=0.7695
+[2026-09-18 14:20:27] [INFO]   SSIM bwd: total=0.7430  static=0.7088  dynamic=0.7630
+[2026-09-18 14:20:27] [INFO]   LPIPS Cascade: fwd=0.3021  bwd=0.3119
+[2026-09-18 14:20:27] [INFO]   ===== Fusion =====
+[2026-09-18 14:20:27] [INFO]   PSNR:  total=27.19  static=30.88  dynamic=26.37
+[2026-09-18 14:20:27] [INFO]   SSIM:  total=0.8154  static=0.8367  dynamic=0.8063
+[2026-09-18 14:20:27] [INFO]   LPIPS Fusion: 0.2240
+[2026-09-18 14:20:27] [INFO]   weights: w0=0.41  w1=0.33  w2=0.15  w3=0.12  delta=0.0129
+[2026-09-18 14:20:27] [INFO]   loss: recon=0.0337  wsm=0.0179  lpips=0.00000
+[2026-09-18 14:20:27] [INFO]   gap: cascade_fwd=0.0357  cascade_bwd=0.0384  fusion=0.0317  gt_warp_fwd=0.0834  gt_warp_bwd=0.0838
+[2026-09-18 14:20:27] [INFO]   speed: 83.1ms/frame
+[2026-09-18 14:21:30] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_008
+[2026-09-18 14:33:25] [INFO] epoch= 9/10 step=  200/2640 (  8%) | loss=0.0800  bwd=0.0227  fwd=0.0225  fus=0.0348  recon=0.0226  offset=1.5355  lpips=0.00000  fus_recon=0.0348  wsm=0.0188
+[2026-09-18 14:45:19] [INFO] epoch= 9/10 step=  400/2640 ( 15%) | loss=0.0777  bwd=0.0220  fwd=0.0218  fus=0.0340  recon=0.0219  offset=1.5544  lpips=0.00000  fus_recon=0.0340  wsm=0.0187
+[2026-09-18 14:57:11] [INFO] epoch= 9/10 step=  600/2640 ( 23%) | loss=0.0764  bwd=0.0215  fwd=0.0213  fus=0.0335  recon=0.0214  offset=1.5891  lpips=0.00000  fus_recon=0.0335  wsm=0.0189
+[2026-09-18 15:09:06] [INFO] epoch= 9/10 step=  800/2640 ( 30%) | loss=0.0764  bwd=0.0215  fwd=0.0214  fus=0.0335  recon=0.0215  offset=1.5484  lpips=0.00000  fus_recon=0.0335  wsm=0.0188
+[2026-09-18 15:21:00] [INFO] epoch= 9/10 step= 1000/2640 ( 38%) | loss=0.0769  bwd=0.0217  fwd=0.0216  fus=0.0336  recon=0.0216  offset=1.5321  lpips=0.00000  fus_recon=0.0336  wsm=0.0188
+[2026-09-18 15:32:52] [INFO] epoch= 9/10 step= 1200/2640 ( 45%) | loss=0.0769  bwd=0.0217  fwd=0.0216  fus=0.0336  recon=0.0216  offset=1.5232  lpips=0.00000  fus_recon=0.0336  wsm=0.0189
+[2026-09-18 15:44:47] [INFO] epoch= 9/10 step= 1400/2640 ( 53%) | loss=0.0768  bwd=0.0217  fwd=0.0215  fus=0.0335  recon=0.0216  offset=1.5056  lpips=0.00000  fus_recon=0.0335  wsm=0.0189
+[2026-09-18 15:56:42] [INFO] epoch= 9/10 step= 1600/2640 ( 61%) | loss=0.0767  bwd=0.0216  fwd=0.0215  fus=0.0335  recon=0.0216  offset=1.4960  lpips=0.00000  fus_recon=0.0335  wsm=0.0189
+[2026-09-18 16:08:36] [INFO] epoch= 9/10 step= 1800/2640 ( 68%) | loss=0.0768  bwd=0.0217  fwd=0.0216  fus=0.0335  recon=0.0216  offset=1.5322  lpips=0.00000  fus_recon=0.0335  wsm=0.0189
+[2026-09-18 16:20:29] [INFO] epoch= 9/10 step= 2000/2640 ( 76%) | loss=0.0768  bwd=0.0217  fwd=0.0216  fus=0.0336  recon=0.0216  offset=1.5437  lpips=0.00000  fus_recon=0.0336  wsm=0.0190
+[2026-09-18 16:32:23] [INFO] epoch= 9/10 step= 2200/2640 ( 83%) | loss=0.0767  bwd=0.0216  fwd=0.0215  fus=0.0335  recon=0.0216  offset=1.5554  lpips=0.00000  fus_recon=0.0335  wsm=0.0190
+[2026-09-18 16:44:17] [INFO] epoch= 9/10 step= 2400/2640 ( 91%) | loss=0.0767  bwd=0.0217  fwd=0.0215  fus=0.0335  recon=0.0216  offset=1.5742  lpips=0.00000  fus_recon=0.0335  wsm=0.0190
+[2026-09-18 16:56:10] [INFO] epoch= 9/10 step= 2600/2640 ( 98%) | loss=0.0766  bwd=0.0216  fwd=0.0215  fus=0.0335  recon=0.0216  offset=1.5916  lpips=0.00000  fus_recon=0.0335  wsm=0.0191
+[2026-09-18 16:58:33] [INFO] ckpt saved: ckpt_epoch9.pth
+[2026-09-18 17:04:49] [INFO] ===== epoch 9/10 done =====
+[2026-09-18 17:04:49] [INFO]   train:   loss=0.0767  recon=0.0216  offset=1.5891  lpips=0.00000
+[2026-09-18 17:04:49] [INFO]   ===== Cascade =====
+[2026-09-18 17:04:49] [INFO]   PSNR fwd: total=24.39  static=24.89  dynamic=24.49
+[2026-09-18 17:04:49] [INFO]   PSNR bwd: total=24.15  static=24.37  dynamic=24.49
+[2026-09-18 17:04:49] [INFO]   SSIM fwd: total=0.7573  static=0.7308  dynamic=0.7697
+[2026-09-18 17:04:49] [INFO]   SSIM bwd: total=0.7485  static=0.7198  dynamic=0.7650
+[2026-09-18 17:04:49] [INFO]   LPIPS Cascade: fwd=0.3018  bwd=0.3039
+[2026-09-18 17:04:49] [INFO]   ===== Fusion =====
+[2026-09-18 17:04:49] [INFO]   PSNR:  total=27.24  static=30.97  dynamic=26.42
+[2026-09-18 17:04:49] [INFO]   SSIM:  total=0.8182  static=0.8395  dynamic=0.8091
+[2026-09-18 17:04:49] [INFO]   LPIPS Fusion: 0.2245
+[2026-09-18 17:04:49] [INFO]   weights: w0=0.38  w1=0.36  w2=0.13  w3=0.12  delta=0.0138
+[2026-09-18 17:04:49] [INFO]   loss: recon=0.0335  wsm=0.0191  lpips=0.00000
+[2026-09-18 17:04:49] [INFO]   gap: cascade_fwd=0.0362  cascade_bwd=0.0372  fusion=0.0314  gt_warp_fwd=0.0834  gt_warp_bwd=0.0839
+[2026-09-18 17:04:49] [INFO]   speed: 83.0ms/frame
+[2026-09-18 17:04:49] [INFO] best ckpt: epoch=9  metric=27.2352
+[2026-09-18 17:05:52] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_009
+[2026-09-18 17:17:47] [INFO] epoch=10/10 step=  200/2640 (  8%) | loss=0.0761  bwd=0.0215  fwd=0.0214  fus=0.0332  recon=0.0214  offset=1.5136  lpips=0.00000  fus_recon=0.0332  wsm=0.0194
+[2026-09-18 17:29:40] [INFO] epoch=10/10 step=  400/2640 ( 15%) | loss=0.0759  bwd=0.0214  fwd=0.0213  fus=0.0332  recon=0.0214  offset=1.4590  lpips=0.00000  fus_recon=0.0332  wsm=0.0193
+[2026-09-18 17:41:37] [INFO] epoch=10/10 step=  600/2640 ( 23%) | loss=0.0768  bwd=0.0217  fwd=0.0216  fus=0.0336  recon=0.0216  offset=1.4316  lpips=0.00000  fus_recon=0.0336  wsm=0.0194
+[2026-09-18 17:53:32] [INFO] epoch=10/10 step=  800/2640 ( 30%) | loss=0.0776  bwd=0.0219  fwd=0.0219  fus=0.0338  recon=0.0219  offset=1.3953  lpips=0.00000  fus_recon=0.0338  wsm=0.0194
+[2026-09-18 18:05:25] [INFO] epoch=10/10 step= 1000/2640 ( 38%) | loss=0.0770  bwd=0.0217  fwd=0.0217  fus=0.0336  recon=0.0217  offset=1.4065  lpips=0.00000  fus_recon=0.0336  wsm=0.0194
+[2026-09-18 18:17:19] [INFO] epoch=10/10 step= 1200/2640 ( 45%) | loss=0.0771  bwd=0.0217  fwd=0.0217  fus=0.0337  recon=0.0217  offset=1.4221  lpips=0.00000  fus_recon=0.0337  wsm=0.0194
+[2026-09-18 18:29:12] [INFO] epoch=10/10 step= 1400/2640 ( 53%) | loss=0.0768  bwd=0.0216  fwd=0.0216  fus=0.0335  recon=0.0216  offset=1.4598  lpips=0.00000  fus_recon=0.0335  wsm=0.0194
+[2026-09-18 18:41:05] [INFO] epoch=10/10 step= 1600/2640 ( 61%) | loss=0.0767  bwd=0.0216  fwd=0.0216  fus=0.0335  recon=0.0216  offset=1.4728  lpips=0.00000  fus_recon=0.0335  wsm=0.0194
+[2026-09-18 18:53:02] [INFO] epoch=10/10 step= 1800/2640 ( 68%) | loss=0.0770  bwd=0.0217  fwd=0.0217  fus=0.0336  recon=0.0217  offset=1.4774  lpips=0.00000  fus_recon=0.0336  wsm=0.0194
+[2026-09-18 19:04:57] [INFO] epoch=10/10 step= 2000/2640 ( 76%) | loss=0.0767  bwd=0.0216  fwd=0.0216  fus=0.0335  recon=0.0216  offset=1.4930  lpips=0.00000  fus_recon=0.0335  wsm=0.0195
+[2026-09-18 19:16:52] [INFO] epoch=10/10 step= 2200/2640 ( 83%) | loss=0.0768  bwd=0.0216  fwd=0.0216  fus=0.0335  recon=0.0216  offset=1.5146  lpips=0.00000  fus_recon=0.0335  wsm=0.0195
+[2026-09-18 19:28:45] [INFO] epoch=10/10 step= 2400/2640 ( 91%) | loss=0.0765  bwd=0.0216  fwd=0.0215  fus=0.0334  recon=0.0216  offset=1.5373  lpips=0.00000  fus_recon=0.0334  wsm=0.0195
+[2026-09-18 19:40:39] [INFO] epoch=10/10 step= 2600/2640 ( 98%) | loss=0.0764  bwd=0.0215  fwd=0.0215  fus=0.0334  recon=0.0215  offset=1.5389  lpips=0.00000  fus_recon=0.0334  wsm=0.0195
+[2026-09-18 19:43:03] [INFO] ckpt saved: ckpt_epoch10.pth
+[2026-09-18 19:49:21] [INFO] ===== epoch 10/10 done =====
+[2026-09-18 19:49:21] [INFO]   train:   loss=0.0764  recon=0.0215  offset=1.5380  lpips=0.00000
+[2026-09-18 19:49:21] [INFO]   ===== Cascade =====
+[2026-09-18 19:49:21] [INFO]   PSNR fwd: total=24.68  static=25.30  dynamic=24.61
+[2026-09-18 19:49:21] [INFO]   PSNR bwd: total=24.07  static=24.22  dynamic=24.47
+[2026-09-18 19:49:21] [INFO]   SSIM fwd: total=0.7595  static=0.7347  dynamic=0.7710
+[2026-09-18 19:49:21] [INFO]   SSIM bwd: total=0.7468  static=0.7167  dynamic=0.7645
+[2026-09-18 19:49:21] [INFO]   LPIPS Cascade: fwd=0.2998  bwd=0.3058
+[2026-09-18 19:49:21] [INFO]   ===== Fusion =====
+[2026-09-18 19:49:21] [INFO]   PSNR:  total=27.34  static=31.17  dynamic=26.51
+[2026-09-18 19:49:21] [INFO]   SSIM:  total=0.8214  static=0.8428  dynamic=0.8126
+[2026-09-18 19:49:21] [INFO]   LPIPS Fusion: 0.2246
+[2026-09-18 19:49:21] [INFO]   weights: w0=0.38  w1=0.36  w2=0.13  w3=0.13  delta=0.0136
+[2026-09-18 19:49:21] [INFO]   loss: recon=0.0334  wsm=0.0195  lpips=0.00000
+[2026-09-18 19:49:21] [INFO]   gap: cascade_fwd=0.0350  cascade_bwd=0.0376  fusion=0.0309  gt_warp_fwd=0.0834  gt_warp_bwd=0.0838
+[2026-09-18 19:49:21] [INFO]   speed: 83.4ms/frame
+[2026-09-18 19:49:21] [INFO] best ckpt: epoch=10  metric=27.3409
+[2026-09-18 19:50:23] [INFO] preview saved: experiments/test_v21_lpips/phase2/preview/epoch_010
+[2026-09-18 19:50:24] [INFO] phase end: best epoch=10 (metric=27.3409) saved as ckpt_phase2.pth
+[2026-09-18 19:50:24] [INFO] ==================== PHASE 2 DONE ====================
+[2026-09-18 19:50:24] [INFO]  ckpt saved: experiments/test_v21_lpips/phase2/ckpt/ckpt_phase2.pth
+[2026-09-18 19:50:24] [INFO] ============================================================

@@ -1,0 +1,486 @@
+[2026-09-11 06:22:26] [INFO] device=cuda  exp=test_v21  phase=1
+[2026-09-11 06:22:27] [INFO] bf16 AMP enabled
+[2026-09-11 06:22:27] [INFO] found 240 train sequences, 30 val sequences
+[2026-09-11 06:23:59] [INFO] event=640x360, target=1280x720  event_downsample=1
+[2026-09-11 06:23:59] [INFO] model params: 784,411  hidden=128
+[2026-09-11 06:24:01] [INFO] LPIPS metric enabled (alex)
+[2026-09-11 06:24:01] [INFO] train pairs: 2640
+[2026-09-11 06:24:01] [INFO] structure_encoder lr=1e-03 (10x base)
+[2026-09-11 06:24:01] [INFO] ==================== Phase 1: Offset Warmup ====================
+[2026-09-11 06:24:01] [INFO]  epochs=20  lr=0.0001  warp_w=1.0  direction=alternate
+[2026-09-11 06:24:01] [INFO] ============================================================
+[2026-09-11 06:36:13] [INFO] epoch= 1/20 step=  200/2640 (  8%) | loss=0.9348  warp=0.0584  offset=4.4750  mem=0.661
+[2026-09-11 06:48:24] [INFO] epoch= 1/20 step=  400/2640 ( 15%) | loss=0.8115  warp=0.0507  offset=4.2602  mem=0.669
+[2026-09-11 07:00:34] [INFO] epoch= 1/20 step=  600/2640 ( 23%) | loss=0.7645  warp=0.0478  offset=4.2220  mem=0.675
+[2026-09-11 07:12:45] [INFO] epoch= 1/20 step=  800/2640 ( 30%) | loss=0.7301  warp=0.0456  offset=4.2611  mem=0.677
+[2026-09-11 07:24:55] [INFO] epoch= 1/20 step= 1000/2640 ( 38%) | loss=0.7046  warp=0.0440  offset=4.1705  mem=0.679
+[2026-09-11 07:37:05] [INFO] epoch= 1/20 step= 1200/2640 ( 45%) | loss=0.6881  warp=0.0430  offset=4.0702  mem=0.680
+[2026-09-11 07:49:15] [INFO] epoch= 1/20 step= 1400/2640 ( 53%) | loss=0.6745  warp=0.0422  offset=4.0084  mem=0.680
+[2026-09-11 08:01:26] [INFO] epoch= 1/20 step= 1600/2640 ( 61%) | loss=0.6613  warp=0.0413  offset=3.9970  mem=0.680
+[2026-09-11 08:13:36] [INFO] epoch= 1/20 step= 1800/2640 ( 68%) | loss=0.6480  warp=0.0405  offset=3.9118  mem=0.680
+[2026-09-11 08:25:46] [INFO] epoch= 1/20 step= 2000/2640 ( 76%) | loss=0.6362  warp=0.0398  offset=3.8605  mem=0.679
+[2026-09-11 08:37:56] [INFO] epoch= 1/20 step= 2200/2640 ( 83%) | loss=0.6267  warp=0.0392  offset=3.8309  mem=0.679
+[2026-09-11 08:50:06] [INFO] epoch= 1/20 step= 2400/2640 ( 91%) | loss=0.6211  warp=0.0388  offset=3.7918  mem=0.678
+[2026-09-11 09:02:16] [INFO] epoch= 1/20 step= 2600/2640 ( 98%) | loss=0.6124  warp=0.0383  offset=3.8030  mem=0.678
+[2026-09-11 09:04:43] [INFO] ckpt saved: ckpt_epoch1.pth
+[2026-09-11 09:10:02] [INFO] ===== epoch 1/20 done =====
+[2026-09-11 09:10:02] [INFO]   train:   loss=0.6114  warp=0.0382  offset=3.8269  mem=0.678
+[2026-09-11 09:10:02] [INFO]   PSNR fwd: total=25.06  static=31.23  dynamic=23.33
+[2026-09-11 09:10:02] [INFO]   PSNR bwd: total=24.99  static=31.27  dynamic=23.25
+[2026-09-11 09:10:02] [INFO]   SSIM fwd: total=0.7370  static=0.7968  dynamic=0.6997
+[2026-09-11 09:10:02] [INFO]   SSIM bwd: total=0.7309  static=0.7927  dynamic=0.6925
+[2026-09-11 09:10:02] [INFO]   LPIPS: fwd=0.2202  bwd=0.2225
+[2026-09-11 09:10:02] [INFO]   warp L1: fwd=0.0681  bwd=0.0689  |  speed: 59.9ms/frame
+[2026-09-11 09:10:02] [INFO] best ckpt: epoch=1  metric=23.2934
+[2026-09-11 09:10:55] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_001
+[2026-09-11 09:19:43] [INFO] epoch= 2/20 step=  200/2640 (  8%) | loss=0.4996  warp=0.0312  offset=2.8141  mem=0.679
+[2026-09-11 09:28:22] [INFO] epoch= 2/20 step=  400/2640 ( 15%) | loss=0.4914  warp=0.0307  offset=2.8157  mem=0.678
+[2026-09-11 09:37:02] [INFO] epoch= 2/20 step=  600/2640 ( 23%) | loss=0.4945  warp=0.0309  offset=2.8312  mem=0.678
+[2026-09-11 09:45:41] [INFO] epoch= 2/20 step=  800/2640 ( 30%) | loss=0.4945  warp=0.0309  offset=2.9071  mem=0.678
+[2026-09-11 09:54:21] [INFO] epoch= 2/20 step= 1000/2640 ( 38%) | loss=0.4909  warp=0.0307  offset=2.7840  mem=0.678
+[2026-09-11 10:03:01] [INFO] epoch= 2/20 step= 1200/2640 ( 45%) | loss=0.4889  warp=0.0306  offset=2.8385  mem=0.678
+[2026-09-11 10:11:41] [INFO] epoch= 2/20 step= 1400/2640 ( 53%) | loss=0.4889  warp=0.0306  offset=2.8725  mem=0.677
+[2026-09-11 10:20:21] [INFO] epoch= 2/20 step= 1600/2640 ( 61%) | loss=0.4862  warp=0.0304  offset=2.9160  mem=0.677
+[2026-09-11 10:29:01] [INFO] epoch= 2/20 step= 1800/2640 ( 68%) | loss=0.4842  warp=0.0303  offset=2.8888  mem=0.677
+[2026-09-11 10:37:41] [INFO] epoch= 2/20 step= 2000/2640 ( 76%) | loss=0.4841  warp=0.0303  offset=2.8284  mem=0.678
+[2026-09-11 10:46:22] [INFO] epoch= 2/20 step= 2200/2640 ( 83%) | loss=0.4830  warp=0.0302  offset=2.8031  mem=0.678
+[2026-09-11 10:55:03] [INFO] epoch= 2/20 step= 2400/2640 ( 91%) | loss=0.4830  warp=0.0302  offset=2.8870  mem=0.678
+[2026-09-11 11:03:43] [INFO] epoch= 2/20 step= 2600/2640 ( 98%) | loss=0.4802  warp=0.0300  offset=2.8706  mem=0.678
+[2026-09-11 11:05:27] [INFO] ckpt saved: ckpt_epoch2.pth
+[2026-09-11 11:10:41] [INFO] ===== epoch 2/20 done =====
+[2026-09-11 11:10:41] [INFO]   train:   loss=0.4798  warp=0.0300  offset=2.8619  mem=0.678
+[2026-09-11 11:10:41] [INFO]   PSNR fwd: total=26.23  static=31.33  dynamic=24.64
+[2026-09-11 11:10:41] [INFO]   PSNR bwd: total=26.21  static=31.20  dynamic=24.63
+[2026-09-11 11:10:41] [INFO]   SSIM fwd: total=0.7703  static=0.8122  dynamic=0.7441
+[2026-09-11 11:10:41] [INFO]   SSIM bwd: total=0.7700  static=0.8115  dynamic=0.7442
+[2026-09-11 11:10:41] [INFO]   LPIPS: fwd=0.2106  bwd=0.2083
+[2026-09-11 11:10:41] [INFO]   warp L1: fwd=0.0763  bwd=0.0771  |  speed: 59.8ms/frame
+[2026-09-11 11:10:41] [INFO] best ckpt: epoch=2  metric=24.6347
+[2026-09-11 11:11:32] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_002
+[2026-09-11 11:20:12] [INFO] epoch= 3/20 step=  200/2640 (  8%) | loss=0.4774  warp=0.0298  offset=4.8940  mem=0.679
+[2026-09-11 11:28:52] [INFO] epoch= 3/20 step=  400/2640 ( 15%) | loss=0.4741  warp=0.0296  offset=3.8429  mem=0.680
+[2026-09-11 11:37:32] [INFO] epoch= 3/20 step=  600/2640 ( 23%) | loss=0.4661  warp=0.0291  offset=3.2477  mem=0.679
+[2026-09-11 11:46:11] [INFO] epoch= 3/20 step=  800/2640 ( 30%) | loss=0.4615  warp=0.0288  offset=3.1805  mem=0.679
+[2026-09-11 11:54:51] [INFO] epoch= 3/20 step= 1000/2640 ( 38%) | loss=0.4572  warp=0.0286  offset=3.0631  mem=0.679
+[2026-09-11 12:03:31] [INFO] epoch= 3/20 step= 1200/2640 ( 45%) | loss=0.4553  warp=0.0285  offset=3.0531  mem=0.679
+[2026-09-11 12:12:12] [INFO] epoch= 3/20 step= 1400/2640 ( 53%) | loss=0.4562  warp=0.0285  offset=3.0019  mem=0.679
+[2026-09-11 12:20:52] [INFO] epoch= 3/20 step= 1600/2640 ( 61%) | loss=0.4554  warp=0.0285  offset=3.0291  mem=0.678
+[2026-09-11 12:29:32] [INFO] epoch= 3/20 step= 1800/2640 ( 68%) | loss=0.4555  warp=0.0285  offset=2.9580  mem=0.678
+[2026-09-11 12:38:12] [INFO] epoch= 3/20 step= 2000/2640 ( 76%) | loss=0.4545  warp=0.0284  offset=3.1449  mem=0.678
+[2026-09-11 12:46:52] [INFO] epoch= 3/20 step= 2200/2640 ( 83%) | loss=0.4550  warp=0.0284  offset=3.2469  mem=0.677
+[2026-09-11 12:55:32] [INFO] epoch= 3/20 step= 2400/2640 ( 91%) | loss=0.4530  warp=0.0283  offset=3.4429  mem=0.677
+[2026-09-11 13:04:12] [INFO] epoch= 3/20 step= 2600/2640 ( 98%) | loss=0.4505  warp=0.0282  offset=3.3814  mem=0.677
+[2026-09-11 13:05:56] [INFO] ckpt saved: ckpt_epoch3.pth
+[2026-09-11 13:11:10] [INFO] ===== epoch 3/20 done =====
+[2026-09-11 13:11:10] [INFO]   train:   loss=0.4495  warp=0.0281  offset=3.3609  mem=0.677
+[2026-09-11 13:11:10] [INFO]   PSNR fwd: total=26.76  static=31.73  dynamic=25.19
+[2026-09-11 13:11:10] [INFO]   PSNR bwd: total=26.74  static=31.71  dynamic=25.16
+[2026-09-11 13:11:10] [INFO]   SSIM fwd: total=0.7834  static=0.8156  dynamic=0.7631
+[2026-09-11 13:11:10] [INFO]   SSIM bwd: total=0.7849  static=0.8163  dynamic=0.7651
+[2026-09-11 13:11:10] [INFO]   LPIPS: fwd=0.2052  bwd=0.2048
+[2026-09-11 13:11:10] [INFO]   warp L1: fwd=0.0782  bwd=0.0790  |  speed: 59.8ms/frame
+[2026-09-11 13:11:11] [INFO] best ckpt: epoch=3  metric=25.1742
+[2026-09-11 13:12:01] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_003
+[2026-09-11 13:20:42] [INFO] epoch= 4/20 step=  200/2640 (  8%) | loss=0.4653  warp=0.0291  offset=2.5379  mem=0.675
+[2026-09-11 13:29:22] [INFO] epoch= 4/20 step=  400/2640 ( 15%) | loss=0.4419  warp=0.0276  offset=3.7277  mem=0.674
+[2026-09-11 13:38:02] [INFO] epoch= 4/20 step=  600/2640 ( 23%) | loss=0.4391  warp=0.0274  offset=3.3765  mem=0.674
+[2026-09-11 13:46:43] [INFO] epoch= 4/20 step=  800/2640 ( 30%) | loss=0.4433  warp=0.0277  offset=3.1767  mem=0.675
+[2026-09-11 13:55:22] [INFO] epoch= 4/20 step= 1000/2640 ( 38%) | loss=0.4384  warp=0.0274  offset=3.0103  mem=0.675
+[2026-09-11 14:04:02] [INFO] epoch= 4/20 step= 1200/2640 ( 45%) | loss=0.4364  warp=0.0273  offset=3.0067  mem=0.674
+[2026-09-11 14:12:42] [INFO] epoch= 4/20 step= 1400/2640 ( 53%) | loss=0.4377  warp=0.0274  offset=3.3003  mem=0.675
+[2026-09-11 14:21:22] [INFO] epoch= 4/20 step= 1600/2640 ( 61%) | loss=0.4379  warp=0.0274  offset=4.4621  mem=0.674
+[2026-09-11 14:30:02] [INFO] epoch= 4/20 step= 1800/2640 ( 68%) | loss=0.4365  warp=0.0273  offset=4.4805  mem=0.673
+[2026-09-11 14:38:42] [INFO] epoch= 4/20 step= 2000/2640 ( 76%) | loss=0.4362  warp=0.0273  offset=4.5763  mem=0.673
+[2026-09-11 14:47:22] [INFO] epoch= 4/20 step= 2200/2640 ( 83%) | loss=0.4344  warp=0.0271  offset=4.4726  mem=0.673
+[2026-09-11 14:56:01] [INFO] epoch= 4/20 step= 2400/2640 ( 91%) | loss=0.4334  warp=0.0271  offset=4.3991  mem=0.672
+[2026-09-11 15:04:42] [INFO] epoch= 4/20 step= 2600/2640 ( 98%) | loss=0.4342  warp=0.0271  offset=4.2626  mem=0.672
+[2026-09-11 15:06:26] [INFO] ckpt saved: ckpt_epoch4.pth
+[2026-09-11 15:11:40] [INFO] ===== epoch 4/20 done =====
+[2026-09-11 15:11:40] [INFO]   train:   loss=0.4339  warp=0.0271  offset=4.2390  mem=0.672
+[2026-09-11 15:11:40] [INFO]   PSNR fwd: total=27.01  static=31.78  dynamic=25.47
+[2026-09-11 15:11:40] [INFO]   PSNR bwd: total=26.90  static=31.61  dynamic=25.36
+[2026-09-11 15:11:40] [INFO]   SSIM fwd: total=0.7933  static=0.8171  dynamic=0.7777
+[2026-09-11 15:11:40] [INFO]   SSIM bwd: total=0.7910  static=0.8163  dynamic=0.7747
+[2026-09-11 15:11:40] [INFO]   LPIPS: fwd=0.2023  bwd=0.2001
+[2026-09-11 15:11:40] [INFO]   warp L1: fwd=0.0789  bwd=0.0797  |  speed: 59.8ms/frame
+[2026-09-11 15:11:40] [INFO] best ckpt: epoch=4  metric=25.4134
+[2026-09-11 15:12:31] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_004
+[2026-09-11 15:21:10] [INFO] epoch= 5/20 step=  200/2640 (  8%) | loss=0.3976  warp=0.0249  offset=3.4834  mem=0.670
+[2026-09-11 15:29:50] [INFO] epoch= 5/20 step=  400/2640 ( 15%) | loss=0.4193  warp=0.0262  offset=3.2544  mem=0.671
+[2026-09-11 15:38:31] [INFO] epoch= 5/20 step=  600/2640 ( 23%) | loss=0.4238  warp=0.0265  offset=3.3465  mem=0.671
+[2026-09-11 15:47:11] [INFO] epoch= 5/20 step=  800/2640 ( 30%) | loss=0.4262  warp=0.0266  offset=3.3065  mem=0.671
+[2026-09-11 15:55:51] [INFO] epoch= 5/20 step= 1000/2640 ( 38%) | loss=0.4289  warp=0.0268  offset=4.0930  mem=0.669
+[2026-09-11 16:04:31] [INFO] epoch= 5/20 step= 1200/2640 ( 45%) | loss=0.4290  warp=0.0268  offset=4.4601  mem=0.669
+[2026-09-11 16:13:11] [INFO] epoch= 5/20 step= 1400/2640 ( 53%) | loss=0.4286  warp=0.0268  offset=4.6621  mem=0.669
+[2026-09-11 16:21:52] [INFO] epoch= 5/20 step= 1600/2640 ( 61%) | loss=0.4274  warp=0.0267  offset=4.5356  mem=0.669
+[2026-09-11 16:30:32] [INFO] epoch= 5/20 step= 1800/2640 ( 68%) | loss=0.4287  warp=0.0268  offset=4.9034  mem=0.668
+[2026-09-11 16:39:13] [INFO] epoch= 5/20 step= 2000/2640 ( 76%) | loss=0.4273  warp=0.0267  offset=5.2517  mem=0.667
+[2026-09-11 16:47:53] [INFO] epoch= 5/20 step= 2200/2640 ( 83%) | loss=0.4262  warp=0.0266  offset=5.5871  mem=0.666
+[2026-09-11 16:56:33] [INFO] epoch= 5/20 step= 2400/2640 ( 91%) | loss=0.4256  warp=0.0266  offset=5.7230  mem=0.666
+[2026-09-11 17:05:14] [INFO] epoch= 5/20 step= 2600/2640 ( 98%) | loss=0.4247  warp=0.0265  offset=5.5614  mem=0.666
+[2026-09-11 17:06:58] [INFO] ckpt saved: ckpt_epoch5.pth
+[2026-09-11 17:12:14] [INFO] ===== epoch 5/20 done =====
+[2026-09-11 17:12:14] [INFO]   train:   loss=0.4250  warp=0.0266  offset=5.5536  mem=0.666
+[2026-09-11 17:12:14] [INFO]   PSNR fwd: total=25.61  static=28.06  dynamic=24.64
+[2026-09-11 17:12:14] [INFO]   PSNR bwd: total=25.50  static=28.00  dynamic=24.47
+[2026-09-11 17:12:14] [INFO]   SSIM fwd: total=0.7805  static=0.7970  dynamic=0.7694
+[2026-09-11 17:12:14] [INFO]   SSIM bwd: total=0.7809  static=0.7962  dynamic=0.7707
+[2026-09-11 17:12:14] [INFO]   LPIPS: fwd=0.1990  bwd=0.1983
+[2026-09-11 17:12:14] [INFO]   warp L1: fwd=0.0801  bwd=0.0807  |  speed: 59.8ms/frame
+[2026-09-11 17:13:04] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_005
+[2026-09-11 17:21:45] [INFO] epoch= 6/20 step=  200/2640 (  8%) | loss=0.3991  warp=0.0249  offset=3.0712  mem=0.666
+[2026-09-11 17:30:25] [INFO] epoch= 6/20 step=  400/2640 ( 15%) | loss=0.4076  warp=0.0255  offset=3.7771  mem=0.666
+[2026-09-11 17:39:06] [INFO] epoch= 6/20 step=  600/2640 ( 23%) | loss=0.4083  warp=0.0255  offset=4.0984  mem=0.666
+[2026-09-11 17:47:48] [INFO] epoch= 6/20 step=  800/2640 ( 30%) | loss=0.4162  warp=0.0260  offset=5.5252  mem=0.665
+[2026-09-11 17:56:30] [INFO] epoch= 6/20 step= 1000/2640 ( 38%) | loss=0.4174  warp=0.0261  offset=5.7253  mem=0.665
+[2026-09-11 18:05:11] [INFO] epoch= 6/20 step= 1200/2640 ( 45%) | loss=0.4191  warp=0.0262  offset=5.9855  mem=0.662
+[2026-09-11 18:13:53] [INFO] epoch= 6/20 step= 1400/2640 ( 53%) | loss=0.4203  warp=0.0263  offset=5.6540  mem=0.662
+[2026-09-11 18:22:34] [INFO] epoch= 6/20 step= 1600/2640 ( 61%) | loss=0.4185  warp=0.0262  offset=5.4659  mem=0.661
+[2026-09-11 18:31:15] [INFO] epoch= 6/20 step= 1800/2640 ( 68%) | loss=0.4180  warp=0.0261  offset=5.3974  mem=0.660
+[2026-09-11 18:39:57] [INFO] epoch= 6/20 step= 2000/2640 ( 76%) | loss=0.4189  warp=0.0262  offset=5.1094  mem=0.660
+[2026-09-11 18:48:38] [INFO] epoch= 6/20 step= 2200/2640 ( 83%) | loss=0.4177  warp=0.0261  offset=4.8605  mem=0.660
+[2026-09-11 18:57:18] [INFO] epoch= 6/20 step= 2400/2640 ( 91%) | loss=0.4168  warp=0.0261  offset=4.6775  mem=0.660
+[2026-09-11 19:06:00] [INFO] epoch= 6/20 step= 2600/2640 ( 98%) | loss=0.4165  warp=0.0260  offset=4.5223  mem=0.660
+[2026-09-11 19:07:44] [INFO] ckpt saved: ckpt_epoch6.pth
+[2026-09-11 19:13:00] [INFO] ===== epoch 6/20 done =====
+[2026-09-11 19:13:00] [INFO]   train:   loss=0.4165  warp=0.0260  offset=4.4878  mem=0.660
+[2026-09-11 19:13:00] [INFO]   PSNR fwd: total=26.69  static=30.40  dynamic=25.37
+[2026-09-11 19:13:00] [INFO]   PSNR bwd: total=26.79  static=30.49  dynamic=25.46
+[2026-09-11 19:13:00] [INFO]   SSIM fwd: total=0.7972  static=0.8137  dynamic=0.7861
+[2026-09-11 19:13:00] [INFO]   SSIM bwd: total=0.7979  static=0.8145  dynamic=0.7868
+[2026-09-11 19:13:00] [INFO]   LPIPS: fwd=0.1982  bwd=0.1975
+[2026-09-11 19:13:00] [INFO]   warp L1: fwd=0.0798  bwd=0.0807  |  speed: 60.1ms/frame
+[2026-09-11 19:13:50] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_006
+[2026-09-11 19:22:30] [INFO] epoch= 7/20 step=  200/2640 (  8%) | loss=0.4018  warp=0.0251  offset=4.4186  mem=0.663
+[2026-09-11 19:31:09] [INFO] epoch= 7/20 step=  400/2640 ( 15%) | loss=0.3930  warp=0.0246  offset=3.8857  mem=0.662
+[2026-09-11 19:39:50] [INFO] epoch= 7/20 step=  600/2640 ( 23%) | loss=0.3979  warp=0.0249  offset=3.5191  mem=0.661
+[2026-09-11 19:48:30] [INFO] epoch= 7/20 step=  800/2640 ( 30%) | loss=0.4010  warp=0.0251  offset=5.0068  mem=0.661
+[2026-09-11 19:57:10] [INFO] epoch= 7/20 step= 1000/2640 ( 38%) | loss=0.4022  warp=0.0251  offset=6.0545  mem=0.660
+[2026-09-11 20:05:49] [INFO] epoch= 7/20 step= 1200/2640 ( 45%) | loss=0.4014  warp=0.0251  offset=5.7744  mem=0.660
+[2026-09-11 20:14:29] [INFO] epoch= 7/20 step= 1400/2640 ( 53%) | loss=0.4031  warp=0.0252  offset=6.1626  mem=0.657
+[2026-09-11 20:23:09] [INFO] epoch= 7/20 step= 1600/2640 ( 61%) | loss=0.4050  warp=0.0253  offset=6.8604  mem=0.655
+[2026-09-11 20:31:49] [INFO] epoch= 7/20 step= 1800/2640 ( 68%) | loss=0.4053  warp=0.0253  offset=6.5717  mem=0.655
+[2026-09-11 20:40:29] [INFO] epoch= 7/20 step= 2000/2640 ( 76%) | loss=0.4050  warp=0.0253  offset=6.1133  mem=0.655
+[2026-09-11 20:49:09] [INFO] epoch= 7/20 step= 2200/2640 ( 83%) | loss=0.4051  warp=0.0253  offset=5.7230  mem=0.655
+[2026-09-11 20:57:50] [INFO] epoch= 7/20 step= 2400/2640 ( 91%) | loss=0.4077  warp=0.0255  offset=5.4387  mem=0.655
+[2026-09-11 21:06:30] [INFO] epoch= 7/20 step= 2600/2640 ( 98%) | loss=0.4069  warp=0.0254  offset=5.2371  mem=0.656
+[2026-09-11 21:08:14] [INFO] ckpt saved: ckpt_epoch7.pth
+[2026-09-11 21:13:30] [INFO] ===== epoch 7/20 done =====
+[2026-09-11 21:13:30] [INFO]   train:   loss=0.4075  warp=0.0255  offset=5.1968  mem=0.656
+[2026-09-11 21:13:30] [INFO]   PSNR fwd: total=27.54  static=31.79  dynamic=26.09
+[2026-09-11 21:13:30] [INFO]   PSNR bwd: total=27.45  static=31.80  dynamic=25.98
+[2026-09-11 21:13:30] [INFO]   SSIM fwd: total=0.8081  static=0.8201  dynamic=0.7994
+[2026-09-11 21:13:30] [INFO]   SSIM bwd: total=0.8072  static=0.8196  dynamic=0.7983
+[2026-09-11 21:13:30] [INFO]   LPIPS: fwd=0.1946  bwd=0.1943
+[2026-09-11 21:13:30] [INFO]   warp L1: fwd=0.0800  bwd=0.0809  |  speed: 60.1ms/frame
+[2026-09-11 21:13:30] [INFO] best ckpt: epoch=7  metric=26.0365
+[2026-09-11 21:14:20] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_007
+[2026-09-11 21:23:00] [INFO] epoch= 8/20 step=  200/2640 (  8%) | loss=0.4327  warp=0.0270  offset=8.7537  mem=0.651
+[2026-09-11 21:31:40] [INFO] epoch= 8/20 step=  400/2640 ( 15%) | loss=0.4169  warp=0.0261  offset=5.9591  mem=0.653
+[2026-09-11 21:40:20] [INFO] epoch= 8/20 step=  600/2640 ( 23%) | loss=0.4086  warp=0.0255  offset=5.0786  mem=0.653
+[2026-09-11 21:48:59] [INFO] epoch= 8/20 step=  800/2640 ( 30%) | loss=0.4069  warp=0.0254  offset=4.5362  mem=0.653
+[2026-09-11 21:57:39] [INFO] epoch= 8/20 step= 1000/2640 ( 38%) | loss=0.4062  warp=0.0254  offset=4.2130  mem=0.653
+[2026-09-11 22:06:52] [INFO] epoch= 8/20 step= 1200/2640 ( 45%) | loss=0.4022  warp=0.0251  offset=4.3037  mem=0.653
+[2026-09-11 22:16:13] [INFO] epoch= 8/20 step= 1400/2640 ( 53%) | loss=0.4011  warp=0.0251  offset=4.3798  mem=0.654
+[2026-09-11 22:25:33] [INFO] epoch= 8/20 step= 1600/2640 ( 61%) | loss=0.4050  warp=0.0253  offset=4.1921  mem=0.655
+[2026-09-11 22:34:52] [INFO] epoch= 8/20 step= 1800/2640 ( 68%) | loss=0.4047  warp=0.0253  offset=4.0079  mem=0.656
+[2026-09-11 22:44:11] [INFO] epoch= 8/20 step= 2000/2640 ( 76%) | loss=0.4050  warp=0.0253  offset=3.8826  mem=0.657
+[2026-09-11 22:53:29] [INFO] epoch= 8/20 step= 2200/2640 ( 83%) | loss=0.4060  warp=0.0254  offset=3.8589  mem=0.657
+[2026-09-11 23:02:46] [INFO] epoch= 8/20 step= 2400/2640 ( 91%) | loss=0.4045  warp=0.0253  offset=3.7595  mem=0.657
+[2026-09-11 23:12:02] [INFO] epoch= 8/20 step= 2600/2640 ( 98%) | loss=0.4026  warp=0.0252  offset=4.0565  mem=0.656
+[2026-09-11 23:13:53] [INFO] ckpt saved: ckpt_epoch8.pth
+[2026-09-11 23:19:49] [INFO] ===== epoch 8/20 done =====
+[2026-09-11 23:19:49] [INFO]   train:   loss=0.4030  warp=0.0252  offset=4.1040  mem=0.655
+[2026-09-11 23:19:49] [INFO]   PSNR fwd: total=27.39  static=31.42  dynamic=25.98
+[2026-09-11 23:19:49] [INFO]   PSNR bwd: total=27.39  static=31.49  dynamic=25.97
+[2026-09-11 23:19:49] [INFO]   SSIM fwd: total=0.8074  static=0.8143  dynamic=0.8005
+[2026-09-11 23:19:49] [INFO]   SSIM bwd: total=0.8070  static=0.8157  dynamic=0.7999
+[2026-09-11 23:19:49] [INFO]   LPIPS: fwd=0.1949  bwd=0.1917
+[2026-09-11 23:19:49] [INFO]   warp L1: fwd=0.0800  bwd=0.0803  |  speed: 60.1ms/frame
+[2026-09-11 23:20:39] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_008
+[2026-09-11 23:29:37] [INFO] epoch= 9/20 step=  200/2640 (  8%) | loss=0.3936  warp=0.0246  offset=3.0932  mem=0.635
+[2026-09-11 23:38:32] [INFO] epoch= 9/20 step=  400/2640 ( 15%) | loss=0.3987  warp=0.0249  offset=7.1670  mem=0.641
+[2026-09-11 23:47:26] [INFO] epoch= 9/20 step=  600/2640 ( 23%) | loss=0.4020  warp=0.0251  offset=6.3140  mem=0.644
+[2026-09-11 23:56:20] [INFO] epoch= 9/20 step=  800/2640 ( 30%) | loss=0.3984  warp=0.0249  offset=5.4475  mem=0.646
+[2026-09-12 00:05:16] [INFO] epoch= 9/20 step= 1000/2640 ( 38%) | loss=0.3993  warp=0.0250  offset=5.1879  mem=0.648
+[2026-09-12 00:14:15] [INFO] epoch= 9/20 step= 1200/2640 ( 45%) | loss=0.3999  warp=0.0250  offset=4.9109  mem=0.649
+[2026-09-12 00:23:13] [INFO] epoch= 9/20 step= 1400/2640 ( 53%) | loss=0.4013  warp=0.0251  offset=4.5168  mem=0.650
+[2026-09-12 00:32:07] [INFO] epoch= 9/20 step= 1600/2640 ( 61%) | loss=0.3999  warp=0.0250  offset=6.7089  mem=0.649
+[2026-09-12 00:41:06] [INFO] epoch= 9/20 step= 1800/2640 ( 68%) | loss=0.3989  warp=0.0249  offset=8.0666  mem=0.649
+[2026-09-12 00:50:01] [INFO] epoch= 9/20 step= 2000/2640 ( 76%) | loss=0.3981  warp=0.0249  offset=8.5071  mem=0.650
+[2026-09-12 00:58:58] [INFO] epoch= 9/20 step= 2200/2640 ( 83%) | loss=0.3976  warp=0.0249  offset=8.8075  mem=0.650
+[2026-09-12 01:07:53] [INFO] epoch= 9/20 step= 2400/2640 ( 91%) | loss=0.3988  warp=0.0249  offset=8.6499  mem=0.649
+[2026-09-12 01:16:50] [INFO] epoch= 9/20 step= 2600/2640 ( 98%) | loss=0.3977  warp=0.0249  offset=8.1983  mem=0.649
+[2026-09-12 01:18:36] [INFO] ckpt saved: ckpt_epoch9.pth
+[2026-09-12 01:23:52] [INFO] ===== epoch 9/20 done =====
+[2026-09-12 01:23:52] [INFO]   train:   loss=0.3981  warp=0.0249  offset=8.1075  mem=0.649
+[2026-09-12 01:23:52] [INFO]   PSNR fwd: total=27.52  static=31.41  dynamic=26.15
+[2026-09-12 01:23:52] [INFO]   PSNR bwd: total=27.43  static=31.46  dynamic=26.03
+[2026-09-12 01:23:52] [INFO]   SSIM fwd: total=0.8151  static=0.8207  dynamic=0.8103
+[2026-09-12 01:23:52] [INFO]   SSIM bwd: total=0.8138  static=0.8204  dynamic=0.8084
+[2026-09-12 01:23:52] [INFO]   LPIPS: fwd=0.1807  bwd=0.1834
+[2026-09-12 01:23:52] [INFO]   warp L1: fwd=0.0782  bwd=0.0797  |  speed: 60.1ms/frame
+[2026-09-12 01:23:52] [INFO] best ckpt: epoch=9  metric=26.0901
+[2026-09-12 01:24:42] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_009
+[2026-09-12 01:33:22] [INFO] epoch=10/20 step=  200/2640 (  8%) | loss=0.4019  warp=0.0251  offset=2.4511  mem=0.651
+[2026-09-12 01:42:02] [INFO] epoch=10/20 step=  400/2640 ( 15%) | loss=0.3913  warp=0.0245  offset=2.7595  mem=0.650
+[2026-09-12 01:50:42] [INFO] epoch=10/20 step=  600/2640 ( 23%) | loss=0.3979  warp=0.0249  offset=2.6838  mem=0.651
+[2026-09-12 01:59:22] [INFO] epoch=10/20 step=  800/2640 ( 30%) | loss=0.3981  warp=0.0249  offset=3.9837  mem=0.649
+[2026-09-12 02:08:02] [INFO] epoch=10/20 step= 1000/2640 ( 38%) | loss=0.4012  warp=0.0251  offset=5.0300  mem=0.645
+[2026-09-12 02:16:42] [INFO] epoch=10/20 step= 1200/2640 ( 45%) | loss=0.4009  warp=0.0251  offset=5.2706  mem=0.643
+[2026-09-12 02:25:22] [INFO] epoch=10/20 step= 1400/2640 ( 53%) | loss=0.4029  warp=0.0252  offset=4.9629  mem=0.643
+[2026-09-12 02:34:01] [INFO] epoch=10/20 step= 1600/2640 ( 61%) | loss=0.4003  warp=0.0250  offset=4.7163  mem=0.643
+[2026-09-12 02:42:42] [INFO] epoch=10/20 step= 1800/2640 ( 68%) | loss=0.4013  warp=0.0251  offset=4.5102  mem=0.643
+[2026-09-12 02:51:21] [INFO] epoch=10/20 step= 2000/2640 ( 76%) | loss=0.3989  warp=0.0249  offset=4.4778  mem=0.643
+[2026-09-12 03:00:01] [INFO] epoch=10/20 step= 2200/2640 ( 83%) | loss=0.3989  warp=0.0249  offset=4.2949  mem=0.643
+[2026-09-12 03:08:40] [INFO] epoch=10/20 step= 2400/2640 ( 91%) | loss=0.3956  warp=0.0247  offset=4.1607  mem=0.643
+[2026-09-12 03:17:20] [INFO] epoch=10/20 step= 2600/2640 ( 98%) | loss=0.3953  warp=0.0247  offset=4.0343  mem=0.644
+[2026-09-12 03:19:04] [INFO] ckpt saved: ckpt_epoch10.pth
+[2026-09-12 03:24:20] [INFO] ===== epoch 10/20 done =====
+[2026-09-12 03:24:20] [INFO]   train:   loss=0.3955  warp=0.0247  offset=4.0129  mem=0.644
+[2026-09-12 03:24:20] [INFO]   PSNR fwd: total=27.28  static=31.39  dynamic=25.87
+[2026-09-12 03:24:20] [INFO]   PSNR bwd: total=27.30  static=31.24  dynamic=25.94
+[2026-09-12 03:24:20] [INFO]   SSIM fwd: total=0.8153  static=0.8217  dynamic=0.8098
+[2026-09-12 03:24:20] [INFO]   SSIM bwd: total=0.8138  static=0.8202  dynamic=0.8086
+[2026-09-12 03:24:20] [INFO]   LPIPS: fwd=0.1807  bwd=0.1802
+[2026-09-12 03:24:20] [INFO]   warp L1: fwd=0.0793  bwd=0.0804  |  speed: 60.1ms/frame
+[2026-09-12 03:25:10] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_010
+[2026-09-12 03:33:49] [INFO] epoch=11/20 step=  200/2640 (  8%) | loss=0.3844  warp=0.0240  offset=2.3607  mem=0.649
+[2026-09-12 03:42:28] [INFO] epoch=11/20 step=  400/2640 ( 15%) | loss=0.3828  warp=0.0239  offset=2.8098  mem=0.647
+[2026-09-12 03:51:07] [INFO] epoch=11/20 step=  600/2640 ( 23%) | loss=0.3762  warp=0.0235  offset=4.3896  mem=0.643
+[2026-09-12 03:59:47] [INFO] epoch=11/20 step=  800/2640 ( 30%) | loss=0.3809  warp=0.0238  offset=4.2215  mem=0.643
+[2026-09-12 04:08:27] [INFO] epoch=11/20 step= 1000/2640 ( 38%) | loss=0.3834  warp=0.0240  offset=4.0974  mem=0.643
+[2026-09-12 04:17:08] [INFO] epoch=11/20 step= 1200/2640 ( 45%) | loss=0.3879  warp=0.0242  offset=3.7576  mem=0.644
+[2026-09-12 04:25:47] [INFO] epoch=11/20 step= 1400/2640 ( 53%) | loss=0.3885  warp=0.0243  offset=3.7538  mem=0.644
+[2026-09-12 04:34:27] [INFO] epoch=11/20 step= 1600/2640 ( 61%) | loss=0.3871  warp=0.0242  offset=3.6767  mem=0.644
+[2026-09-12 04:43:06] [INFO] epoch=11/20 step= 1800/2640 ( 68%) | loss=0.3870  warp=0.0242  offset=3.4765  mem=0.645
+[2026-09-12 04:51:46] [INFO] epoch=11/20 step= 2000/2640 ( 76%) | loss=0.3878  warp=0.0242  offset=3.6123  mem=0.645
+[2026-09-12 05:00:25] [INFO] epoch=11/20 step= 2200/2640 ( 83%) | loss=0.3866  warp=0.0242  offset=3.7796  mem=0.646
+[2026-09-12 05:09:05] [INFO] epoch=11/20 step= 2400/2640 ( 91%) | loss=0.3885  warp=0.0243  offset=3.6884  mem=0.646
+[2026-09-12 05:17:45] [INFO] epoch=11/20 step= 2600/2640 ( 98%) | loss=0.3895  warp=0.0243  offset=3.7282  mem=0.647
+[2026-09-12 05:19:29] [INFO] ckpt saved: ckpt_epoch11.pth
+[2026-09-12 05:24:45] [INFO] ===== epoch 11/20 done =====
+[2026-09-12 05:24:45] [INFO]   train:   loss=0.3890  warp=0.0243  offset=3.7029  mem=0.647
+[2026-09-12 05:24:45] [INFO]   PSNR fwd: total=27.56  static=31.38  dynamic=26.21
+[2026-09-12 05:24:45] [INFO]   PSNR bwd: total=27.64  static=31.44  dynamic=26.31
+[2026-09-12 05:24:45] [INFO]   SSIM fwd: total=0.8184  static=0.8203  dynamic=0.8160
+[2026-09-12 05:24:45] [INFO]   SSIM bwd: total=0.8182  static=0.8206  dynamic=0.8155
+[2026-09-12 05:24:45] [INFO]   LPIPS: fwd=0.1792  bwd=0.1788
+[2026-09-12 05:24:45] [INFO]   warp L1: fwd=0.0791  bwd=0.0801  |  speed: 60.1ms/frame
+[2026-09-12 05:24:45] [INFO] best ckpt: epoch=11  metric=26.2607
+[2026-09-12 05:25:36] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_011
+[2026-09-12 05:34:15] [INFO] epoch=12/20 step=  200/2640 (  8%) | loss=0.3772  warp=0.0236  offset=1.5091  mem=0.651
+[2026-09-12 05:42:55] [INFO] epoch=12/20 step=  400/2640 ( 15%) | loss=0.3743  warp=0.0234  offset=1.9557  mem=0.652
+[2026-09-12 05:51:34] [INFO] epoch=12/20 step=  600/2640 ( 23%) | loss=0.3820  warp=0.0239  offset=1.9355  mem=0.652
+[2026-09-12 06:00:14] [INFO] epoch=12/20 step=  800/2640 ( 30%) | loss=0.3815  warp=0.0238  offset=1.8682  mem=0.652
+[2026-09-12 06:08:53] [INFO] epoch=12/20 step= 1000/2640 ( 38%) | loss=0.3835  warp=0.0240  offset=1.8930  mem=0.651
+[2026-09-12 06:17:33] [INFO] epoch=12/20 step= 1200/2640 ( 45%) | loss=0.3843  warp=0.0240  offset=1.9890  mem=0.651
+[2026-09-12 06:26:12] [INFO] epoch=12/20 step= 1400/2640 ( 53%) | loss=0.3866  warp=0.0242  offset=3.7311  mem=0.650
+[2026-09-12 06:34:51] [INFO] epoch=12/20 step= 1600/2640 ( 61%) | loss=0.3851  warp=0.0241  offset=4.1914  mem=0.645
+[2026-09-12 06:43:31] [INFO] epoch=12/20 step= 1800/2640 ( 68%) | loss=0.3861  warp=0.0241  offset=4.1410  mem=0.643
+[2026-09-12 06:52:11] [INFO] epoch=12/20 step= 2000/2640 ( 76%) | loss=0.3870  warp=0.0242  offset=3.9768  mem=0.643
+[2026-09-12 07:00:50] [INFO] epoch=12/20 step= 2200/2640 ( 83%) | loss=0.3854  warp=0.0241  offset=3.8694  mem=0.643
+[2026-09-12 07:09:30] [INFO] epoch=12/20 step= 2400/2640 ( 91%) | loss=0.3850  warp=0.0241  offset=3.8492  mem=0.643
+[2026-09-12 07:18:09] [INFO] epoch=12/20 step= 2600/2640 ( 98%) | loss=0.3856  warp=0.0241  offset=3.7928  mem=0.643
+[2026-09-12 07:19:53] [INFO] ckpt saved: ckpt_epoch12.pth
+[2026-09-12 07:25:10] [INFO] ===== epoch 12/20 done =====
+[2026-09-12 07:25:10] [INFO]   train:   loss=0.3865  warp=0.0242  offset=3.7714  mem=0.643
+[2026-09-12 07:25:10] [INFO]   PSNR fwd: total=27.78  static=31.65  dynamic=26.44
+[2026-09-12 07:25:10] [INFO]   PSNR bwd: total=27.75  static=31.51  dynamic=26.43
+[2026-09-12 07:25:10] [INFO]   SSIM fwd: total=0.8219  static=0.8231  dynamic=0.8199
+[2026-09-12 07:25:10] [INFO]   SSIM bwd: total=0.8203  static=0.8223  dynamic=0.8180
+[2026-09-12 07:25:10] [INFO]   LPIPS: fwd=0.1783  bwd=0.1794
+[2026-09-12 07:25:10] [INFO]   warp L1: fwd=0.0798  bwd=0.0805  |  speed: 60.1ms/frame
+[2026-09-12 07:25:10] [INFO] best ckpt: epoch=12  metric=26.4349
+[2026-09-12 07:26:00] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_012
+[2026-09-12 07:34:40] [INFO] epoch=13/20 step=  200/2640 (  8%) | loss=0.4069  warp=0.0254  offset=2.2470  mem=0.651
+[2026-09-12 07:43:19] [INFO] epoch=13/20 step=  400/2640 ( 15%) | loss=0.3865  warp=0.0242  offset=2.1635  mem=0.649
+[2026-09-12 07:51:58] [INFO] epoch=13/20 step=  600/2640 ( 23%) | loss=0.3792  warp=0.0237  offset=2.1996  mem=0.649
+[2026-09-12 08:00:38] [INFO] epoch=13/20 step=  800/2640 ( 30%) | loss=0.3799  warp=0.0237  offset=2.4242  mem=0.649
+[2026-09-12 08:09:17] [INFO] epoch=13/20 step= 1000/2640 ( 38%) | loss=0.3788  warp=0.0237  offset=2.4158  mem=0.648
+[2026-09-12 08:17:57] [INFO] epoch=13/20 step= 1200/2640 ( 45%) | loss=0.3795  warp=0.0237  offset=2.6288  mem=0.649
+[2026-09-12 08:26:37] [INFO] epoch=13/20 step= 1400/2640 ( 53%) | loss=0.3803  warp=0.0238  offset=2.8024  mem=0.648
+[2026-09-12 08:35:16] [INFO] epoch=13/20 step= 1600/2640 ( 61%) | loss=0.3794  warp=0.0237  offset=2.8422  mem=0.646
+[2026-09-12 08:43:57] [INFO] epoch=13/20 step= 1800/2640 ( 68%) | loss=0.3817  warp=0.0239  offset=2.7224  mem=0.646
+[2026-09-12 08:52:36] [INFO] epoch=13/20 step= 2000/2640 ( 76%) | loss=0.3803  warp=0.0238  offset=2.6487  mem=0.646
+[2026-09-12 09:01:16] [INFO] epoch=13/20 step= 2200/2640 ( 83%) | loss=0.3808  warp=0.0238  offset=2.7906  mem=0.646
+[2026-09-12 09:09:56] [INFO] epoch=13/20 step= 2400/2640 ( 91%) | loss=0.3809  warp=0.0238  offset=3.2967  mem=0.645
+[2026-09-12 09:18:36] [INFO] epoch=13/20 step= 2600/2640 ( 98%) | loss=0.3831  warp=0.0239  offset=3.3700  mem=0.645
+[2026-09-12 09:20:20] [INFO] ckpt saved: ckpt_epoch13.pth
+[2026-09-12 09:25:35] [INFO] ===== epoch 13/20 done =====
+[2026-09-12 09:25:35] [INFO]   train:   loss=0.3824  warp=0.0239  offset=3.3690  mem=0.644
+[2026-09-12 09:25:35] [INFO]   PSNR fwd: total=27.92  static=31.81  dynamic=26.55
+[2026-09-12 09:25:35] [INFO]   PSNR bwd: total=27.71  static=31.71  dynamic=26.31
+[2026-09-12 09:25:35] [INFO]   SSIM fwd: total=0.8229  static=0.8221  dynamic=0.8219
+[2026-09-12 09:25:35] [INFO]   SSIM bwd: total=0.8155  static=0.8194  dynamic=0.8114
+[2026-09-12 09:25:35] [INFO]   LPIPS: fwd=0.1786  bwd=0.1842
+[2026-09-12 09:25:35] [INFO]   warp L1: fwd=0.0792  bwd=0.0813  |  speed: 60.1ms/frame
+[2026-09-12 09:26:26] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_013
+[2026-09-12 09:35:06] [INFO] epoch=14/20 step=  200/2640 (  8%) | loss=0.3913  warp=0.0245  offset=3.3485  mem=0.646
+[2026-09-12 09:43:45] [INFO] epoch=14/20 step=  400/2640 ( 15%) | loss=0.3837  warp=0.0240  offset=2.8395  mem=0.645
+[2026-09-12 09:52:24] [INFO] epoch=14/20 step=  600/2640 ( 23%) | loss=0.3807  warp=0.0238  offset=2.6814  mem=0.645
+[2026-09-12 10:01:04] [INFO] epoch=14/20 step=  800/2640 ( 30%) | loss=0.3796  warp=0.0237  offset=2.5103  mem=0.644
+[2026-09-12 10:09:43] [INFO] epoch=14/20 step= 1000/2640 ( 38%) | loss=0.3813  warp=0.0238  offset=5.4905  mem=0.640
+[2026-09-12 10:18:23] [INFO] epoch=14/20 step= 1200/2640 ( 45%) | loss=0.3836  warp=0.0240  offset=7.9445  mem=0.638
+[2026-09-12 10:27:03] [INFO] epoch=14/20 step= 1400/2640 ( 53%) | loss=0.3850  warp=0.0241  offset=7.5218  mem=0.636
+[2026-09-12 10:35:42] [INFO] epoch=14/20 step= 1600/2640 ( 61%) | loss=0.3835  warp=0.0240  offset=7.1625  mem=0.637
+[2026-09-12 10:44:22] [INFO] epoch=14/20 step= 1800/2640 ( 68%) | loss=0.3835  warp=0.0240  offset=6.7225  mem=0.638
+[2026-09-12 10:53:02] [INFO] epoch=14/20 step= 2000/2640 ( 76%) | loss=0.3812  warp=0.0238  offset=6.5319  mem=0.638
+[2026-09-12 11:01:42] [INFO] epoch=14/20 step= 2200/2640 ( 83%) | loss=0.3803  warp=0.0238  offset=6.5366  mem=0.639
+[2026-09-12 11:10:21] [INFO] epoch=14/20 step= 2400/2640 ( 91%) | loss=0.3813  warp=0.0238  offset=6.2533  mem=0.639
+[2026-09-12 11:19:01] [INFO] epoch=14/20 step= 2600/2640 ( 98%) | loss=0.3824  warp=0.0239  offset=6.0080  mem=0.640
+[2026-09-12 11:20:45] [INFO] ckpt saved: ckpt_epoch14.pth
+[2026-09-12 11:26:00] [INFO] ===== epoch 14/20 done =====
+[2026-09-12 11:26:00] [INFO]   train:   loss=0.3822  warp=0.0239  offset=5.9770  mem=0.640
+[2026-09-12 11:26:00] [INFO]   PSNR fwd: total=27.61  static=31.19  dynamic=26.31
+[2026-09-12 11:26:00] [INFO]   PSNR bwd: total=27.44  static=31.33  dynamic=26.05
+[2026-09-12 11:26:00] [INFO]   SSIM fwd: total=0.8238  static=0.8208  dynamic=0.8243
+[2026-09-12 11:26:00] [INFO]   SSIM bwd: total=0.8212  static=0.8207  dynamic=0.8201
+[2026-09-12 11:26:00] [INFO]   LPIPS: fwd=0.1759  bwd=0.1786
+[2026-09-12 11:26:00] [INFO]   warp L1: fwd=0.0794  bwd=0.0805  |  speed: 60.1ms/frame
+[2026-09-12 11:26:50] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_014
+[2026-09-12 11:35:30] [INFO] epoch=15/20 step=  200/2640 (  8%) | loss=0.3622  warp=0.0226  offset=3.1268  mem=0.647
+[2026-09-12 11:44:10] [INFO] epoch=15/20 step=  400/2640 ( 15%) | loss=0.3887  warp=0.0243  offset=2.9499  mem=0.648
+[2026-09-12 11:52:50] [INFO] epoch=15/20 step=  600/2640 ( 23%) | loss=0.3856  warp=0.0241  offset=2.8541  mem=0.647
+[2026-09-12 12:01:29] [INFO] epoch=15/20 step=  800/2640 ( 30%) | loss=0.3772  warp=0.0236  offset=3.3908  mem=0.642
+[2026-09-12 12:10:09] [INFO] epoch=15/20 step= 1000/2640 ( 38%) | loss=0.3785  warp=0.0237  offset=3.4026  mem=0.639
+[2026-09-12 12:18:50] [INFO] epoch=15/20 step= 1200/2640 ( 45%) | loss=0.3802  warp=0.0238  offset=3.2580  mem=0.639
+[2026-09-12 12:27:30] [INFO] epoch=15/20 step= 1400/2640 ( 53%) | loss=0.3814  warp=0.0238  offset=3.2308  mem=0.639
+[2026-09-12 12:36:11] [INFO] epoch=15/20 step= 1600/2640 ( 61%) | loss=0.3804  warp=0.0238  offset=3.1273  mem=0.639
+[2026-09-12 12:44:51] [INFO] epoch=15/20 step= 1800/2640 ( 68%) | loss=0.3795  warp=0.0237  offset=3.0162  mem=0.639
+[2026-09-12 12:53:30] [INFO] epoch=15/20 step= 2000/2640 ( 76%) | loss=0.3763  warp=0.0235  offset=2.9433  mem=0.639
+[2026-09-12 13:02:11] [INFO] epoch=15/20 step= 2200/2640 ( 83%) | loss=0.3771  warp=0.0236  offset=2.9098  mem=0.640
+[2026-09-12 13:10:50] [INFO] epoch=15/20 step= 2400/2640 ( 91%) | loss=0.3787  warp=0.0237  offset=2.9732  mem=0.640
+[2026-09-12 13:19:30] [INFO] epoch=15/20 step= 2600/2640 ( 98%) | loss=0.3773  warp=0.0236  offset=3.1318  mem=0.640
+[2026-09-12 13:21:14] [INFO] ckpt saved: ckpt_epoch15.pth
+[2026-09-12 13:26:30] [INFO] ===== epoch 15/20 done =====
+[2026-09-12 13:26:30] [INFO]   train:   loss=0.3776  warp=0.0236  offset=3.2543  mem=0.640
+[2026-09-12 13:26:30] [INFO]   PSNR fwd: total=27.81  static=31.60  dynamic=26.49
+[2026-09-12 13:26:30] [INFO]   PSNR bwd: total=27.67  static=31.07  dynamic=26.44
+[2026-09-12 13:26:30] [INFO]   SSIM fwd: total=0.8226  static=0.8221  dynamic=0.8217
+[2026-09-12 13:26:30] [INFO]   SSIM bwd: total=0.8219  static=0.8183  dynamic=0.8227
+[2026-09-12 13:26:30] [INFO]   LPIPS: fwd=0.1716  bwd=0.1735
+[2026-09-12 13:26:30] [INFO]   warp L1: fwd=0.0798  bwd=0.0805  |  speed: 60.1ms/frame
+[2026-09-12 13:26:30] [INFO] best ckpt: epoch=15  metric=26.4635
+[2026-09-12 13:27:20] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_015
+[2026-09-12 13:36:00] [INFO] epoch=16/20 step=  200/2640 (  8%) | loss=0.4170  warp=0.0261  offset=5.8237  mem=0.647
+[2026-09-12 13:44:40] [INFO] epoch=16/20 step=  400/2640 ( 15%) | loss=0.3873  warp=0.0242  offset=4.6572  mem=0.645
+[2026-09-12 13:53:20] [INFO] epoch=16/20 step=  600/2640 ( 23%) | loss=0.3823  warp=0.0239  offset=4.6389  mem=0.635
+[2026-09-12 14:01:59] [INFO] epoch=16/20 step=  800/2640 ( 30%) | loss=0.3804  warp=0.0238  offset=4.1078  mem=0.633
+[2026-09-12 14:10:39] [INFO] epoch=16/20 step= 1000/2640 ( 38%) | loss=0.3795  warp=0.0237  offset=4.3510  mem=0.633
+[2026-09-12 14:19:18] [INFO] epoch=16/20 step= 1200/2640 ( 45%) | loss=0.3776  warp=0.0236  offset=4.0651  mem=0.633
+[2026-09-12 14:27:58] [INFO] epoch=16/20 step= 1400/2640 ( 53%) | loss=0.3796  warp=0.0237  offset=3.9665  mem=0.635
+[2026-09-12 14:36:38] [INFO] epoch=16/20 step= 1600/2640 ( 61%) | loss=0.3788  warp=0.0237  offset=3.9011  mem=0.636
+[2026-09-12 14:45:18] [INFO] epoch=16/20 step= 1800/2640 ( 68%) | loss=0.3787  warp=0.0237  offset=3.7457  mem=0.636
+[2026-09-12 14:53:57] [INFO] epoch=16/20 step= 2000/2640 ( 76%) | loss=0.3762  warp=0.0235  offset=3.6273  mem=0.637
+[2026-09-12 15:02:36] [INFO] epoch=16/20 step= 2200/2640 ( 83%) | loss=0.3750  warp=0.0234  offset=3.8601  mem=0.637
+[2026-09-12 15:11:16] [INFO] epoch=16/20 step= 2400/2640 ( 91%) | loss=0.3749  warp=0.0234  offset=3.9435  mem=0.637
+[2026-09-12 15:19:56] [INFO] epoch=16/20 step= 2600/2640 ( 98%) | loss=0.3766  warp=0.0235  offset=4.2112  mem=0.638
+[2026-09-12 15:21:40] [INFO] ckpt saved: ckpt_epoch16.pth
+[2026-09-12 15:26:56] [INFO] ===== epoch 16/20 done =====
+[2026-09-12 15:26:56] [INFO]   train:   loss=0.3769  warp=0.0236  offset=4.2137  mem=0.638
+[2026-09-12 15:26:56] [INFO]   PSNR fwd: total=27.89  static=31.65  dynamic=26.58
+[2026-09-12 15:26:56] [INFO]   PSNR bwd: total=27.76  static=31.58  dynamic=26.43
+[2026-09-12 15:26:56] [INFO]   SSIM fwd: total=0.8239  static=0.8219  dynamic=0.8236
+[2026-09-12 15:26:56] [INFO]   SSIM bwd: total=0.8203  static=0.8201  dynamic=0.8187
+[2026-09-12 15:26:56] [INFO]   LPIPS: fwd=0.1739  bwd=0.1790
+[2026-09-12 15:26:56] [INFO]   warp L1: fwd=0.0797  bwd=0.0808  |  speed: 60.1ms/frame
+[2026-09-12 15:26:56] [INFO] best ckpt: epoch=16  metric=26.5019
+[2026-09-12 15:27:46] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_016
+[2026-09-12 15:36:25] [INFO] epoch=17/20 step=  200/2640 (  8%) | loss=0.3431  warp=0.0214  offset=4.9474  mem=0.640
+[2026-09-12 15:45:05] [INFO] epoch=17/20 step=  400/2640 ( 15%) | loss=0.3582  warp=0.0224  offset=4.6543  mem=0.644
+[2026-09-12 15:53:45] [INFO] epoch=17/20 step=  600/2640 ( 23%) | loss=0.3654  warp=0.0228  offset=4.5743  mem=0.645
+[2026-09-12 16:02:25] [INFO] epoch=17/20 step=  800/2640 ( 30%) | loss=0.3697  warp=0.0231  offset=3.9982  mem=0.645
+[2026-09-12 16:11:05] [INFO] epoch=17/20 step= 1000/2640 ( 38%) | loss=0.3720  warp=0.0233  offset=3.9070  mem=0.643
+[2026-09-12 16:19:44] [INFO] epoch=17/20 step= 1200/2640 ( 45%) | loss=0.3713  warp=0.0232  offset=3.7965  mem=0.642
+[2026-09-12 16:28:24] [INFO] epoch=17/20 step= 1400/2640 ( 53%) | loss=0.3739  warp=0.0234  offset=3.5987  mem=0.641
+[2026-09-12 16:37:04] [INFO] epoch=17/20 step= 1600/2640 ( 61%) | loss=0.3725  warp=0.0233  offset=3.4714  mem=0.641
+[2026-09-12 16:45:44] [INFO] epoch=17/20 step= 1800/2640 ( 68%) | loss=0.3719  warp=0.0232  offset=3.4330  mem=0.641
+[2026-09-12 16:54:23] [INFO] epoch=17/20 step= 2000/2640 ( 76%) | loss=0.3720  warp=0.0232  offset=3.2915  mem=0.641
+[2026-09-12 17:03:03] [INFO] epoch=17/20 step= 2200/2640 ( 83%) | loss=0.3726  warp=0.0233  offset=3.1361  mem=0.641
+[2026-09-12 17:11:42] [INFO] epoch=17/20 step= 2400/2640 ( 91%) | loss=0.3745  warp=0.0234  offset=3.0715  mem=0.642
+[2026-09-12 17:20:23] [INFO] epoch=17/20 step= 2600/2640 ( 98%) | loss=0.3740  warp=0.0234  offset=3.0191  mem=0.642
+[2026-09-12 17:22:07] [INFO] ckpt saved: ckpt_epoch17.pth
+[2026-09-12 17:27:23] [INFO] ===== epoch 17/20 done =====
+[2026-09-12 17:27:23] [INFO]   train:   loss=0.3740  warp=0.0234  offset=3.0080  mem=0.642
+[2026-09-12 17:27:23] [INFO]   PSNR fwd: total=28.11  static=31.84  dynamic=26.79
+[2026-09-12 17:27:23] [INFO]   PSNR bwd: total=28.07  static=31.77  dynamic=26.75
+[2026-09-12 17:27:23] [INFO]   SSIM fwd: total=0.8279  static=0.8229  dynamic=0.8297
+[2026-09-12 17:27:23] [INFO]   SSIM bwd: total=0.8267  static=0.8218  dynamic=0.8285
+[2026-09-12 17:27:23] [INFO]   LPIPS: fwd=0.1697  bwd=0.1728
+[2026-09-12 17:27:23] [INFO]   warp L1: fwd=0.0796  bwd=0.0804  |  speed: 60.1ms/frame
+[2026-09-12 17:27:23] [INFO] best ckpt: epoch=17  metric=26.7690
+[2026-09-12 17:28:13] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_017
+[2026-09-12 17:36:53] [INFO] epoch=18/20 step=  200/2640 (  8%) | loss=0.3857  warp=0.0241  offset=1.8866  mem=0.648
+[2026-09-12 17:45:32] [INFO] epoch=18/20 step=  400/2640 ( 15%) | loss=0.3706  warp=0.0232  offset=2.2093  mem=0.647
+[2026-09-12 17:54:12] [INFO] epoch=18/20 step=  600/2640 ( 23%) | loss=0.3706  warp=0.0232  offset=2.3209  mem=0.647
+[2026-09-12 18:02:52] [INFO] epoch=18/20 step=  800/2640 ( 30%) | loss=0.3713  warp=0.0232  offset=3.6714  mem=0.641
+[2026-09-12 18:11:31] [INFO] epoch=18/20 step= 1000/2640 ( 38%) | loss=0.3706  warp=0.0232  offset=3.7595  mem=0.639
+[2026-09-12 18:20:11] [INFO] epoch=18/20 step= 1200/2640 ( 45%) | loss=0.3707  warp=0.0232  offset=3.8581  mem=0.639
+[2026-09-12 18:28:50] [INFO] epoch=18/20 step= 1400/2640 ( 53%) | loss=0.3687  warp=0.0230  offset=3.6906  mem=0.640
+[2026-09-12 18:37:30] [INFO] epoch=18/20 step= 1600/2640 ( 61%) | loss=0.3696  warp=0.0231  offset=3.5642  mem=0.640
+[2026-09-12 18:46:10] [INFO] epoch=18/20 step= 1800/2640 ( 68%) | loss=0.3695  warp=0.0231  offset=3.5304  mem=0.640
+[2026-09-12 18:54:50] [INFO] epoch=18/20 step= 2000/2640 ( 76%) | loss=0.3699  warp=0.0231  offset=3.6080  mem=0.640
+[2026-09-12 19:03:30] [INFO] epoch=18/20 step= 2200/2640 ( 83%) | loss=0.3704  warp=0.0231  offset=3.4876  mem=0.640
+[2026-09-12 19:12:10] [INFO] epoch=18/20 step= 2400/2640 ( 91%) | loss=0.3704  warp=0.0231  offset=3.3704  mem=0.640
+[2026-09-12 19:20:50] [INFO] epoch=18/20 step= 2600/2640 ( 98%) | loss=0.3716  warp=0.0232  offset=3.4547  mem=0.640
+[2026-09-12 19:22:35] [INFO] ckpt saved: ckpt_epoch18.pth
+[2026-09-12 19:27:51] [INFO] ===== epoch 18/20 done =====
+[2026-09-12 19:27:51] [INFO]   train:   loss=0.3718  warp=0.0232  offset=3.4339  mem=0.640
+[2026-09-12 19:27:51] [INFO]   PSNR fwd: total=28.00  static=31.69  dynamic=26.68
+[2026-09-12 19:27:51] [INFO]   PSNR bwd: total=27.99  static=31.82  dynamic=26.64
+[2026-09-12 19:27:51] [INFO]   SSIM fwd: total=0.8250  static=0.8221  dynamic=0.8255
+[2026-09-12 19:27:51] [INFO]   SSIM bwd: total=0.8235  static=0.8215  dynamic=0.8233
+[2026-09-12 19:27:51] [INFO]   LPIPS: fwd=0.1639  bwd=0.1681
+[2026-09-12 19:27:51] [INFO]   warp L1: fwd=0.0796  bwd=0.0809  |  speed: 60.1ms/frame
+[2026-09-12 19:28:41] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_018
+[2026-09-12 19:37:21] [INFO] epoch=19/20 step=  200/2640 (  8%) | loss=0.3796  warp=0.0237  offset=2.3728  mem=0.644
+[2026-09-12 19:46:01] [INFO] epoch=19/20 step=  400/2640 ( 15%) | loss=0.3709  warp=0.0232  offset=3.2644  mem=0.645
+[2026-09-12 19:54:41] [INFO] epoch=19/20 step=  600/2640 ( 23%) | loss=0.3647  warp=0.0228  offset=2.8679  mem=0.645
+[2026-09-12 20:03:22] [INFO] epoch=19/20 step=  800/2640 ( 30%) | loss=0.3669  warp=0.0229  offset=2.7054  mem=0.645
+[2026-09-12 20:12:03] [INFO] epoch=19/20 step= 1000/2640 ( 38%) | loss=0.3678  warp=0.0230  offset=2.6014  mem=0.645
+[2026-09-12 20:20:43] [INFO] epoch=19/20 step= 1200/2640 ( 45%) | loss=0.3679  warp=0.0230  offset=2.4496  mem=0.645
+[2026-09-12 20:29:23] [INFO] epoch=19/20 step= 1400/2640 ( 53%) | loss=0.3689  warp=0.0231  offset=2.3205  mem=0.645
+[2026-09-12 20:38:03] [INFO] epoch=19/20 step= 1600/2640 ( 61%) | loss=0.3684  warp=0.0230  offset=2.2849  mem=0.645
+[2026-09-12 20:46:44] [INFO] epoch=19/20 step= 1800/2640 ( 68%) | loss=0.3677  warp=0.0230  offset=2.2212  mem=0.645
+[2026-09-12 20:55:24] [INFO] epoch=19/20 step= 2000/2640 ( 76%) | loss=0.3687  warp=0.0230  offset=2.2154  mem=0.645
+[2026-09-12 21:04:04] [INFO] epoch=19/20 step= 2200/2640 ( 83%) | loss=0.3696  warp=0.0231  offset=2.1891  mem=0.645
+[2026-09-12 21:12:44] [INFO] epoch=19/20 step= 2400/2640 ( 91%) | loss=0.3695  warp=0.0231  offset=2.1772  mem=0.645
+[2026-09-12 21:21:24] [INFO] epoch=19/20 step= 2600/2640 ( 98%) | loss=0.3707  warp=0.0232  offset=2.4707  mem=0.644
+[2026-09-12 21:23:08] [INFO] ckpt saved: ckpt_epoch19.pth
+[2026-09-12 21:28:23] [INFO] ===== epoch 19/20 done =====
+[2026-09-12 21:28:23] [INFO]   train:   loss=0.3709  warp=0.0232  offset=2.4900  mem=0.644
+[2026-09-12 21:28:23] [INFO]   PSNR fwd: total=28.05  static=31.61  dynamic=26.76
+[2026-09-12 21:28:23] [INFO]   PSNR bwd: total=27.90  static=31.75  dynamic=26.54
+[2026-09-12 21:28:23] [INFO]   SSIM fwd: total=0.8275  static=0.8220  dynamic=0.8295
+[2026-09-12 21:28:23] [INFO]   SSIM bwd: total=0.8219  static=0.8210  dynamic=0.8212
+[2026-09-12 21:28:23] [INFO]   LPIPS: fwd=0.1655  bwd=0.1708
+[2026-09-12 21:28:23] [INFO]   warp L1: fwd=0.0789  bwd=0.0807  |  speed: 60.1ms/frame
+[2026-09-12 21:29:13] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_019
+[2026-09-12 21:37:54] [INFO] epoch=20/20 step=  200/2640 (  8%) | loss=0.3844  warp=0.0240  offset=3.1187  mem=0.645
+[2026-09-12 21:46:34] [INFO] epoch=20/20 step=  400/2640 ( 15%) | loss=0.3727  warp=0.0233  offset=3.0060  mem=0.644
+[2026-09-12 21:55:14] [INFO] epoch=20/20 step=  600/2640 ( 23%) | loss=0.3685  warp=0.0230  offset=2.6464  mem=0.644
+[2026-09-12 22:04:13] [INFO] epoch=20/20 step=  800/2640 ( 30%) | loss=0.3689  warp=0.0231  offset=2.5325  mem=0.644
+[2026-09-12 22:13:34] [INFO] epoch=20/20 step= 1000/2640 ( 38%) | loss=0.3670  warp=0.0229  offset=2.7874  mem=0.642
+[2026-09-12 22:22:55] [INFO] epoch=20/20 step= 1200/2640 ( 45%) | loss=0.3674  warp=0.0230  offset=2.8766  mem=0.641
+[2026-09-12 22:32:15] [INFO] epoch=20/20 step= 1400/2640 ( 53%) | loss=0.3672  warp=0.0230  offset=2.8572  mem=0.641
+[2026-09-12 22:41:35] [INFO] epoch=20/20 step= 1600/2640 ( 61%) | loss=0.3675  warp=0.0230  offset=2.7734  mem=0.641
+[2026-09-12 22:50:55] [INFO] epoch=20/20 step= 1800/2640 ( 68%) | loss=0.3692  warp=0.0231  offset=2.6910  mem=0.641
+[2026-09-12 23:00:14] [INFO] epoch=20/20 step= 2000/2640 ( 76%) | loss=0.3693  warp=0.0231  offset=2.5936  mem=0.642
+[2026-09-12 23:09:31] [INFO] epoch=20/20 step= 2200/2640 ( 83%) | loss=0.3685  warp=0.0230  offset=2.5309  mem=0.642
+[2026-09-12 23:18:49] [INFO] epoch=20/20 step= 2400/2640 ( 91%) | loss=0.3693  warp=0.0231  offset=2.4944  mem=0.642
+[2026-09-12 23:28:05] [INFO] epoch=20/20 step= 2600/2640 ( 98%) | loss=0.3690  warp=0.0231  offset=2.5134  mem=0.642
+[2026-09-12 23:29:56] [INFO] ckpt saved: ckpt_epoch20.pth
+[2026-09-12 23:35:53] [INFO] ===== epoch 20/20 done =====
+[2026-09-12 23:35:53] [INFO]   train:   loss=0.3691  warp=0.0231  offset=2.5207  mem=0.642
+[2026-09-12 23:35:53] [INFO]   PSNR fwd: total=27.57  static=30.74  dynamic=26.41
+[2026-09-12 23:35:53] [INFO]   PSNR bwd: total=27.19  static=29.57  dynamic=26.27
+[2026-09-12 23:35:53] [INFO]   SSIM fwd: total=0.8239  static=0.8173  dynamic=0.8255
+[2026-09-12 23:35:53] [INFO]   SSIM bwd: total=0.8175  static=0.8078  dynamic=0.8203
+[2026-09-12 23:35:53] [INFO]   LPIPS: fwd=0.1709  bwd=0.1802
+[2026-09-12 23:35:53] [INFO]   warp L1: fwd=0.0799  bwd=0.0810  |  speed: 60.1ms/frame
+[2026-09-12 23:36:44] [INFO] preview saved: experiments/test_v21/phase1/preview/epoch_020
+[2026-09-12 23:36:44] [INFO] phase end: best epoch=17 (metric=26.7690) saved as ckpt_phase1.pth
+[2026-09-12 23:36:44] [INFO] ==================== PHASE 1 DONE ====================
+[2026-09-12 23:36:44] [INFO]  ckpt saved: experiments/test_v21/phase1/ckpt/ckpt_phase1.pth
+[2026-09-12 23:36:44] [INFO] ============================================================
